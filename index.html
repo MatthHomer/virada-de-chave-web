@@ -649,7 +649,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#beta" style="color:var(--accent);">Beta Testers</a>
     <a href="#privacidade">Privacidade</a>
     <a href="#faq">FAQ</a>
-    <a href="#beta" class="nav-cta">Quero testar →</a>
+    <a href="#beta" class="nav-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_click',cta_location:'nav',cta_text:'Quero testar'});">Quero testar →</a>
   </div>
 </nav>
 
@@ -667,7 +667,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     para você finalmente sair do lugar — sem culpa, sem pressão, com resultados.
   </p>
   <div class="hero-actions">
-    <a href="#beta" class="btn-primary">
+    <a href="#beta" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_click',cta_location:'hero',cta_text:'Quero ser beta tester'});">
       🔑 Quero ser beta tester
     </a>
     <a href="#funcionalidades" class="btn-secondary">
@@ -951,7 +951,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Funciona 100% offline</li>
           <li>Notificações por hábito</li>
         </ul>
-        <a href="#beta" class="price-btn featured">🔑 Quero ser beta tester</a>
+        <a href="#beta" class="price-btn featured" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_click',cta_location:'planos',cta_text:'Quero ser beta tester'});">🔑 Quero ser beta tester</a>
       </div>
 
       <!-- PRO — em breve -->
@@ -1021,7 +1021,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         O app está<br>quase pronto.<br><em>Você também?</em>
       </div>
       <p class="cta-sub">O download ainda não está disponível para todo mundo. Mas você pode garantir seu acesso agora — antes do lançamento oficial.</p>
-      <a href="#beta" class="btn-primary" style="font-size:22px;padding:22px 52px;">
+      <a href="#beta" class="btn-primary" style="font-size:22px;padding:22px 52px;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_click',cta_location:'pre_footer',cta_text:'Garantir minha vaga'});">
         🔑 Garantir minha vaga
       </a>
       <div class="cta-guarantee">
@@ -1233,6 +1233,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 /* ── BETA FORM ── */
 var _bDevice = '';
 function selectDev(btn, val) {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'form_device_selected', dispositivo: val });
   _bDevice = val;
   document.querySelectorAll('#device-btns button').forEach(function(b) {
     b.style.borderColor = b.dataset.val === val ? 'var(--accent)' : 'var(--border)';
@@ -1242,6 +1244,8 @@ function selectDev(btn, val) {
   document.getElementById('b-device').value = val;
 }
 function selQ(qid, btn, val) {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'form_survey_answer', pergunta: qid, resposta: val });
   var container = btn.parentElement;
   container.querySelectorAll('button').forEach(function(b) {
     b.style.borderColor = 'var(--border)';
@@ -1281,6 +1285,8 @@ function betaNext1() {
     method: 'POST', body: fd, headers: { 'Accept': 'application/json' }
   });
 
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'form_step1_complete', dispositivo: device });
   document.getElementById('beta-step-1').style.display = 'none';
   document.getElementById('beta-step-2').style.display = 'block';
   document.getElementById('beta').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -1298,6 +1304,8 @@ function betaSubmit() {
 
   var email = document.getElementById('b-email').value.trim();
 
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'form_submitted', q1: q1, q2: q2, q3: q3, q4: q4 });
   /* Mostra confirmação imediatamente */
   document.getElementById('beta-step-2').style.display = 'none';
   document.getElementById('beta-step-3').style.display = 'block';
