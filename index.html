@@ -707,6 +707,65 @@ footer {
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.visible { opacity: 1; transform: none; }
 
+/* ── STRAVA / WORKOUT CARD ── */
+.strava-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; overflow: hidden; transition: border-color 0.2s;
+}
+.strava-card:hover { border-color: rgba(252,82,0,0.4); }
+.strava-map {
+  height: 88px; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #0a1628 0%, #0e2a40 25%, #0d3b28 60%, #122b18 100%);
+}
+.strava-map svg { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.5; }
+.strava-badge {
+  position: absolute; top: 8px; right: 10px;
+  background: #fc5200; color: #fff; border-radius: 4px;
+  font-size: 9px; font-weight: 800; letter-spacing: 1px;
+  padding: 3px 7px; text-transform: uppercase;
+}
+.strava-type {
+  position: absolute; bottom: 8px; left: 12px;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 15px;
+  font-weight: 900; color: #fff; letter-spacing: 1px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+}
+.strava-body { padding: 12px 14px 14px; }
+.strava-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin: 10px 0;
+}
+.strava-stat { padding: 8px 6px; text-align: center; border-right: 1px solid var(--border); }
+.strava-stat:last-child { border-right: none; }
+.strava-stat-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px; font-weight: 900; color: var(--text); line-height: 1;
+}
+.strava-stat-lbl { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-top: 3px; }
+
+/* ── BOOK CARD ── */
+.book-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 14px 16px; transition: border-color 0.2s;
+}
+.book-card:hover { border-color: rgba(232,255,71,0.2); }
+.book-inner { display: flex; gap: 14px; align-items: flex-start; margin: 10px 0 0; }
+.book-cover {
+  width: 44px; height: 60px; border-radius: 4px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 22px;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.5);
+}
+.book-title { font-weight: 700; font-size: 13px; color: var(--text); margin-bottom: 2px; line-height: 1.3; }
+.book-author { font-size: 11px; color: var(--muted); margin-bottom: 6px; }
+.book-stars { color: var(--accent); font-size: 11px; letter-spacing: 2px; margin-bottom: 6px; display: block; }
+.book-quote { font-size: 12px; color: var(--muted2); font-style: italic; line-height: 1.5; }
+.book-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(61,255,143,0.08); border: 1px solid rgba(61,255,143,0.2);
+  color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: 1px;
+  padding: 3px 8px; border-radius: 20px; text-transform: uppercase; margin-bottom: 8px;
+}
+
 /* ── MOBILE ── */
 @media (max-width: 768px) {
   nav { padding: 16px 20px; }
@@ -853,12 +912,8 @@ footer {
 <!-- ── SOLUTION ── -->
 <section class="solution-section" id="funcionalidades">
   <div class="container">
-    <div class="reveal">
-      <div class="section-label">A solução</div>
-      <h2 class="section-title">Uma virada de<br><em style="color:var(--accent)">chave por dia.</em></h2>
-    </div>
-    <div class="solution-layout">
-      <div style="position:relative">
+    <div class="solution-layout" style="align-items:start">
+      <div style="position:relative;padding-top:20px">
         <div class="mockup-glow"></div>
         <div class="app-mockup">
           <div class="mockup-screen">
@@ -913,6 +968,10 @@ footer {
         </div>
       </div>
       <div class="solution-points reveal">
+        <div style="margin-bottom:36px">
+          <div class="section-label">A solução</div>
+          <h2 class="section-title">Uma virada de<br><em style="color:var(--accent)">chave por dia.</em></h2>
+        </div>
         <div class="sol-point">
           <div class="sol-num">01</div>
           <div class="sol-content">
@@ -1093,12 +1152,59 @@ footer {
       <div class="section-label">Comunidade · PRO</div>
       <h2 class="section-title">Sozinho é<br><em style="color:var(--green)">mais difícil.</em></h2>
       <p style="font-size:17px;color:var(--muted2);font-weight:300;max-width:480px;line-height:1.7;margin-top:16px;">
-        Compartilhe conquistas, desafie amigos e se inspire com quem está na mesma jornada. A comunidade PRO torna a consistência <strong style="color:var(--text)">contagiante</strong>.
+        Poste treinos do Strava, livros concluídos e streaks de hábitos. Desafie amigos e se inspire com quem está na mesma jornada. A comunidade PRO torna a consistência <strong style="color:var(--text)">contagiante</strong>.
       </p>
     </div>
     <div class="community-layout">
       <div class="community-cards reveal">
-        <!-- Feed post card -->
+
+        <!-- Strava / workout card -->
+        <div class="strava-card">
+          <div class="strava-map">
+            <!-- Fake route path SVG -->
+            <svg viewBox="0 0 400 88" preserveAspectRatio="none">
+              <polyline points="0,60 40,45 80,55 120,30 160,40 200,20 240,35 280,22 320,38 360,18 400,28"
+                fill="none" stroke="#fc5200" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline points="0,70 40,58 80,65 120,50 160,58 200,42 240,52 280,44 320,55 360,38 400,46"
+                fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+            <span class="strava-badge">Strava</span>
+            <span class="strava-type">🏃 Corrida matinal</span>
+          </div>
+          <div class="strava-body">
+            <div class="comm-card-header" style="margin-bottom:0">
+              <div class="comm-avatar" style="background:linear-gradient(135deg,#fc5200,#ff8c42)">T</div>
+              <div>
+                <div class="comm-user">@thiago_l</div>
+                <div class="comm-time">hoje às 7h12</div>
+              </div>
+            </div>
+            <div class="strava-stats">
+              <div class="strava-stat">
+                <div class="strava-stat-val">5.2</div>
+                <div class="strava-stat-lbl">km</div>
+              </div>
+              <div class="strava-stat">
+                <div class="strava-stat-val">28:34</div>
+                <div class="strava-stat-lbl">tempo</div>
+              </div>
+              <div class="strava-stat">
+                <div class="strava-stat-val">5:29</div>
+                <div class="strava-stat-lbl">ritmo/km</div>
+              </div>
+              <div class="strava-stat">
+                <div class="strava-stat-val">312</div>
+                <div class="strava-stat-lbl">kcal</div>
+              </div>
+            </div>
+            <div class="comm-actions">
+              <span class="comm-like">❤️ 38</span>
+              <span>💬 6 comentários</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Streak / habit post -->
         <div class="comm-card">
           <div class="comm-card-header">
             <div class="comm-avatar">R</div>
@@ -1107,12 +1213,46 @@ footer {
               <div class="comm-time">há 2h</div>
             </div>
           </div>
-          <div class="comm-text">🔥 Dia 30 de streak! Nunca cheguei tão longe. Acordar às 6h todo dia mudou tudo — mais energia, mais foco, menos ansiedade. Quem mais tá nessa?</div>
+          <div class="comm-text">🔥 Dia 30 de streak! Acordar às 6h todo dia mudou tudo — mais energia, mais foco, menos ansiedade. Não para mais.</div>
+          <div style="background:rgba(232,255,71,0.06);border:1px solid rgba(232,255,71,0.15);border-radius:8px;padding:8px 12px;display:flex;align-items:center;gap:10px;margin:10px 0;font-size:12px;">
+            <span style="font-size:22px;">🔥</span>
+            <div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;color:var(--accent);line-height:1">30 dias</div>
+              <div style="font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px">streak consecutivo</div>
+            </div>
+            <div style="margin-left:auto;font-size:10px;color:var(--muted)">Acordar cedo · Meditação</div>
+          </div>
           <div class="comm-actions">
             <span class="comm-like">❤️ 42</span>
             <span>💬 8 comentários</span>
           </div>
         </div>
+
+        <!-- Book card -->
+        <div class="book-card">
+          <div class="comm-card-header" style="margin-bottom:6px">
+            <div class="comm-avatar" style="background:linear-gradient(135deg,#3dff8f,#00b894)">C</div>
+            <div>
+              <div class="comm-user">@camila_r</div>
+              <div class="comm-time">há 1 dia</div>
+            </div>
+          </div>
+          <span class="book-badge">📚 Livro concluído</span>
+          <div class="book-inner">
+            <div class="book-cover" style="background:linear-gradient(160deg,#1a0a3e,#3a1a6e)">📗</div>
+            <div>
+              <div class="book-title">Atomic Habits</div>
+              <div class="book-author">James Clear</div>
+              <span class="book-stars">★★★★★</span>
+              <div class="book-quote">"Pequenas mudanças, resultados notáveis. Esse livro explica exatamente por que o Virada de Chave funciona pra mim."</div>
+            </div>
+          </div>
+          <div class="comm-actions" style="margin-top:12px">
+            <span class="comm-like">❤️ 27</span>
+            <span>💬 4 comentários</span>
+          </div>
+        </div>
+
         <!-- Challenge card -->
         <div class="challenge-card">
           <div class="challenge-card-header">
@@ -1126,7 +1266,7 @@ footer {
             </div>
             <div class="ch-vs-label">VS</div>
             <div class="ch-player">
-              <div style="font-size:10px;color:var(--muted);margin-bottom:4px;">@camila_r</div>
+              <div style="font-size:10px;color:var(--muted);margin-bottom:4px;">@rafael_m</div>
               <div style="font-size:16px;font-family:'Barlow Condensed',sans-serif;font-weight:900;color:var(--muted2)">11 dias</div>
             </div>
           </div>
@@ -1135,28 +1275,14 @@ footer {
           </div>
           <div style="font-size:11px;color:var(--muted);margin-top:8px;">6 dias restantes · Você está ganhando 💪</div>
         </div>
-        <!-- Second feed post -->
-        <div class="comm-card">
-          <div class="comm-card-header">
-            <div class="comm-avatar" style="background:linear-gradient(135deg,#3dff8f,#00b894)">C</div>
-            <div>
-              <div class="comm-user">@camila_r</div>
-              <div class="comm-time">há 5h</div>
-            </div>
-          </div>
-          <div class="comm-text">Completei minha meta hoje mesmo com cansaço depois do trabalho. Se tem um dia que eu não queria fazer, era esse. Mas fiz. 🧘‍♀️ Consistência &gt; motivação.</div>
-          <div class="comm-actions">
-            <span class="comm-like">❤️ 31</span>
-            <span>💬 5 comentários</span>
-          </div>
-        </div>
+
       </div>
       <div class="community-points reveal">
         <div class="comm-point">
           <div class="comm-num">01</div>
           <div class="comm-content">
-            <h3>Compartilhe suas conquistas</h3>
-            <p>Poste streaks, treinos, rotinas, conquistas. Crie seu perfil, siga pessoas e construa uma rede de pessoas em evolução real.</p>
+            <h3>Compartilhe treinos, livros e streaks</h3>
+            <p>Importe corridas do Strava, registre livros concluídos, compartilhe streaks de hábitos. Crie seu perfil e construa uma rede de pessoas em evolução real.</p>
           </div>
         </div>
         <div class="comm-point">
@@ -1370,10 +1496,10 @@ footer {
     <div class="reveal" style="max-width:640px;margin:0 auto;">
       <p style="font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:20px;font-weight:700;">✦ &nbsp;Acesso antecipado</p>
       <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(48px,8vw,80px);line-height:.88;letter-spacing:-1px;margin-bottom:20px;">ENTRE PARA<br><em style="color:var(--accent);font-style:normal;">OS FUNDADORES.</em></h2>
-      <p style="font-size:17px;color:var(--muted2);font-weight:300;line-height:1.7;margin-bottom:40px;">Estou selecionando um <strong style="color:var(--text);font-weight:600;">grupo seleto de beta testers</strong> para testar as próximas funcionalidades antes de todo mundo. Quem entrar agora recebe o <strong style="color:var(--accent);font-weight:600;">plano PRO grátis por 3 meses</strong> e o badge permanente de Fundador.</p>
+      <p style="font-size:17px;color:var(--muted2);font-weight:300;line-height:1.7;margin-bottom:40px;">Estou selecionando um <strong style="color:var(--text);font-weight:600;">grupo seleto de beta testers</strong> para testar as próximas funcionalidades antes de todo mundo. Você usa o app, reporta o que encontrar e garante o badge permanente de Fundador.</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:48px;">
         <div style="background:rgba(232,255,71,0.04);border:1px solid rgba(232,255,71,0.12);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:12px;"><span style="font-size:20px;">🔑</span><span style="font-size:14px;color:var(--text);font-weight:500;">Acesso antes de todo mundo</span></div>
-        <div style="background:rgba(232,255,71,0.04);border:1px solid rgba(232,255,71,0.12);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:12px;"><span style="font-size:20px;">💎</span><span style="font-size:14px;color:var(--text);font-weight:500;">PRO grátis por 3 meses</span></div>
+        <div style="background:rgba(232,255,71,0.04);border:1px solid rgba(232,255,71,0.12);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:12px;"><span style="font-size:20px;">🚀</span><span style="font-size:14px;color:var(--text);font-weight:500;">Features novas em primeira mão</span></div>
         <div style="background:rgba(232,255,71,0.04);border:1px solid rgba(232,255,71,0.12);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:12px;"><span style="font-size:20px;">🏆</span><span style="font-size:14px;color:var(--text);font-weight:500;">Badge Fundador permanente</span></div>
         <div style="background:rgba(232,255,71,0.04);border:1px solid rgba(232,255,71,0.12);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:12px;"><span style="font-size:20px;">📣</span><span style="font-size:14px;color:var(--text);font-weight:500;">Seu feedback molda o app</span></div>
       </div>
@@ -1480,7 +1606,7 @@ footer {
           <p style="font-size:15px;color:var(--muted);font-weight:300;line-height:1.7;margin-bottom:32px;">Enviarei o convite de acesso no seu e-mail em até 24h. Fique de olho — pode cair no spam.</p>
           <div style="background:rgba(232,255,71,0.05);border:1px solid rgba(232,255,71,0.15);border-radius:12px;padding:20px 24px;">
             <p style="font-size:13px;font-weight:600;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">O que acontece agora</p>
-            <p style="font-size:14px;color:var(--muted2);line-height:1.9;">1. Você recebe o convite por e-mail<br>2. Baixa o app na Play Store ou App Store<br>3. Plano PRO ativado automaticamente<br>4. Usa e me conta o que achou</p>
+            <p style="font-size:14px;color:var(--muted2);line-height:1.9;">1. Você recebe o convite por e-mail<br>2. Baixa o app na Play Store ou App Store<br>3. Começa a usar antes de todo mundo<br>4. Me conta o que achou e o que melhorar</p>
           </div>
         </div>
       </div>
