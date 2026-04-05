@@ -10,8 +10,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Virada de Chave — Pare de Sobreviver. Comece a Viver.</title>
-<meta name="description" content="O app que transforma sua rotina caótica em resultados reais. Hábitos, tarefas e foco — tudo em um lugar. Grátis para começar.">
+<title>Virada de Chave — Hábitos, Tarefas e Coach IA para virar sua rotina.</title>
+<meta name="description" content="O app que combina hábitos diários, tarefas inteligentes e um Coach IA baseado em Atomic Habits para você finalmente manter uma rotina. Grátis para começar.">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -28,9 +28,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
-
 body {
   background: var(--bg);
   color: var(--text);
@@ -102,14 +100,12 @@ nav.scrolled { padding: 14px 40px; }
   position: relative;
   overflow: hidden;
 }
-
 .hero-bg {
   position: absolute; inset: 0;
   background:
     radial-gradient(ellipse 60% 50% at 50% 0%, rgba(232,255,71,0.12) 0%, transparent 70%),
     radial-gradient(ellipse 40% 30% at 80% 80%, rgba(255,92,26,0.08) 0%, transparent 60%);
 }
-
 .hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
   background: rgba(232,255,71,0.08);
@@ -122,7 +118,6 @@ nav.scrolled { padding: 14px 40px; }
   animation: fadeDown 0.6s ease both;
 }
 .hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: blink 1.5s infinite; }
-
 .hero h1 {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 900; font-style: italic;
@@ -137,7 +132,6 @@ nav.scrolled { padding: 14px 40px; }
   -webkit-text-stroke: 2px var(--text);
   color: transparent;
 }
-
 .hero-sub {
   font-size: clamp(16px, 2.5vw, 22px);
   color: var(--muted2);
@@ -148,13 +142,11 @@ nav.scrolled { padding: 14px 40px; }
   animation: fadeDown 0.6s ease 0.2s both;
 }
 .hero-sub strong { color: var(--text); font-weight: 600; }
-
 .hero-actions {
   display: flex; gap: 16px; align-items: center; justify-content: center;
   flex-wrap: wrap;
   animation: fadeDown 0.6s ease 0.3s both;
 }
-
 .btn-primary {
   display: inline-flex; align-items: center; gap: 10px;
   background: var(--accent); color: #000;
@@ -174,7 +166,6 @@ nav.scrolled { padding: 14px 40px; }
 }
 .btn-primary:hover::before { transform: translateX(120%) skewX(-15deg); }
 .btn-primary:hover { transform: scale(1.04); box-shadow: 0 0 40px rgba(232,255,71,0.4); }
-
 .btn-secondary {
   display: inline-flex; align-items: center; gap: 8px;
   color: var(--muted2); font-size: 14px; font-weight: 500;
@@ -184,7 +175,6 @@ nav.scrolled { padding: 14px 40px; }
 .btn-secondary:hover { color: var(--text); }
 .btn-secondary svg { transition: transform 0.2s; }
 .btn-secondary:hover svg { transform: translateX(4px); }
-
 .hero-proof {
   margin-top: 64px;
   display: flex; align-items: center; gap: 24px; justify-content: center; flex-wrap: wrap;
@@ -213,7 +203,7 @@ nav.scrolled { padding: 14px 40px; }
 }
 .ticker {
   display: flex; gap: 0;
-  animation: ticker 20s linear infinite;
+  animation: ticker 30s linear infinite;
   white-space: nowrap;
 }
 .ticker-item {
@@ -242,18 +232,11 @@ section { position: relative; }
 }
 
 /* ── PROBLEM ── */
-.problem-section {
-  padding: 100px 0;
-  background: var(--bg2);
-}
+.problem-section { padding: 100px 0; background: var(--bg2); }
 .problem-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  margin-top: 60px;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  overflow: hidden;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0; margin-top: 60px;
+  border: 1px solid var(--border); border-radius: 16px; overflow: hidden;
 }
 .problem-card {
   padding: 40px;
@@ -312,9 +295,7 @@ section { position: relative; }
   line-height: 1; letter-spacing: 2px;
 }
 .ms-header small { display: block; font-size: 14px; color: rgba(255,255,255,0.3); letter-spacing: 5px; }
-.ms-ring {
-  display: flex; justify-content: center; padding: 8px 0;
-}
+.ms-ring { display: flex; justify-content: center; padding: 8px 0; }
 .ring-svg { transform: rotate(-90deg); }
 .ms-habit {
   background: #141417; border: 1px solid #222;
@@ -331,6 +312,14 @@ section { position: relative; }
 .ms-habit.done .mh-cb { background: #47ff8a; border-color: #47ff8a; color: #000; }
 .ms-habit .mh-name { flex: 1; font-weight: 500; }
 .ms-habit.done .mh-name { text-decoration: line-through; color: #555; }
+.ms-streak {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(232,255,71,0.06); border: 1px solid rgba(232,255,71,0.15);
+  border-radius: 10px; padding: 10px 14px; font-size: 12px;
+}
+.ms-streak .s-fire { font-size: 18px; }
+.ms-streak .s-text { color: var(--muted2); }
+.ms-streak .s-num { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 900; color: var(--accent); margin-left: auto; }
 .ms-nav {
   display: flex; justify-content: space-around;
   margin-top: auto; padding-top: 10px;
@@ -338,14 +327,11 @@ section { position: relative; }
 }
 .ms-nav span { font-size: 9px; text-align: center; color: #555; display: flex; flex-direction: column; gap: 2px; align-items: center; }
 .ms-nav span.active { color: #e8ff47; }
-
-/* glow */
 .mockup-glow {
   position: absolute; inset: -40px;
   background: radial-gradient(ellipse at 50% 50%, rgba(232,255,71,0.15) 0%, transparent 70%);
   pointer-events: none; z-index: -1;
 }
-
 .solution-points { display: flex; flex-direction: column; gap: 32px; }
 .sol-point { display: flex; gap: 20px; align-items: flex-start; }
 .sol-num {
@@ -361,31 +347,21 @@ section { position: relative; }
 .sol-content p { font-size: 14px; color: var(--muted2); line-height: 1.6; font-weight: 300; }
 
 /* ── FEATURES ── */
-.features-section {
-  padding: 100px 0;
-  background: var(--bg2);
-}
+.features-section { padding: 100px 0; background: var(--bg2); }
 .features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  overflow: hidden;
-  margin-top: 60px;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; background: var(--border);
+  border: 1px solid var(--border); border-radius: 16px;
+  overflow: hidden; margin-top: 60px;
 }
 .feat-card {
-  background: var(--surface);
-  padding: 36px 32px;
-  transition: background 0.2s;
+  background: var(--surface); padding: 36px 32px; transition: background 0.2s;
 }
 .feat-card:hover { background: #16161a; }
 .feat-icon { font-size: 36px; margin-bottom: 20px; display: block; }
 .feat-card h3 {
   font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 800; font-size: 20px; letter-spacing: 1px;
-  margin-bottom: 10px;
+  font-weight: 800; font-size: 20px; letter-spacing: 1px; margin-bottom: 10px;
 }
 .feat-card p { font-size: 14px; color: var(--muted2); line-height: 1.6; font-weight: 300; }
 .feat-tag {
@@ -396,13 +372,159 @@ section { position: relative; }
 }
 .feat-tag.pro { color: var(--accent2); background: rgba(255,92,26,0.08); }
 
-/* ── SOCIAL PROOF / TESTIMONIALS ── */
+/* ── COACH IA SECTION ── */
+.coach-section { padding: 120px 0; overflow: hidden; }
+.coach-layout {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center; margin-top: 60px;
+}
+.coach-mockup {
+  position: relative;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 24px; overflow: hidden;
+  aspect-ratio: 9/16; max-width: 300px; margin: 0 auto;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05);
+}
+.coach-mockup::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+}
+.coach-screen {
+  padding: 20px 16px; height: 100%;
+  background: #0d0d0f; display: flex; flex-direction: column; gap: 10px;
+}
+.cs-header {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px; font-weight: 900; color: var(--text);
+  letter-spacing: 2px; display: flex; align-items: center; gap: 8px;
+}
+.cs-badge {
+  font-size: 9px; font-weight: 700; letter-spacing: 2px;
+  background: var(--accent2); color: #000; padding: 3px 8px; border-radius: 20px;
+}
+.chat-bubble {
+  border-radius: 12px; padding: 10px 14px; font-size: 11px; line-height: 1.5;
+  max-width: 88%;
+}
+.chat-bubble.ai {
+  background: #1a1a1f; border: 1px solid #252528;
+  color: var(--muted2); align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+.chat-bubble.user {
+  background: rgba(232,255,71,0.1); border: 1px solid rgba(232,255,71,0.2);
+  color: var(--text); align-self: flex-end; margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+.chat-bubble strong { color: var(--accent); font-weight: 600; }
+.chat-input-bar {
+  margin-top: auto;
+  background: #141417; border: 1px solid #252528; border-radius: 10px;
+  padding: 10px 14px; font-size: 11px; color: #444;
+  display: flex; align-items: center; gap: 8px;
+}
+.chat-input-bar .send-btn {
+  width: 24px; height: 24px; border-radius: 6px; background: var(--accent);
+  display: flex; align-items: center; justify-content: center; margin-left: auto;
+  font-size: 12px;
+}
+.coach-glow {
+  position: absolute; inset: -40px;
+  background: radial-gradient(ellipse at 50% 50%, rgba(255,92,26,0.15) 0%, transparent 70%);
+  pointer-events: none; z-index: -1;
+}
+.coach-features { display: flex; flex-direction: column; gap: 20px; }
+.coach-feat {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 20px;
+  transition: border-color 0.2s;
+}
+.coach-feat:hover { border-color: rgba(255,92,26,0.3); }
+.coach-feat .cf-icon { font-size: 24px; flex-shrink: 0; }
+.coach-feat h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800; font-size: 16px; letter-spacing: 1px; margin-bottom: 4px;
+}
+.coach-feat p { font-size: 13px; color: var(--muted2); font-weight: 300; line-height: 1.5; }
+
+/* ── COMMUNITY SECTION ── */
+.community-section { padding: 120px 0; background: var(--bg2); }
+.community-layout {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center; margin-top: 60px;
+}
+.community-cards { display: flex; flex-direction: column; gap: 16px; }
+.comm-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
+  padding: 20px 24px; transition: border-color 0.2s;
+}
+.comm-card:hover { border-color: rgba(61,255,143,0.25); }
+.comm-card-header {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+}
+.comm-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700; color: #000;
+}
+.comm-user { font-size: 13px; font-weight: 600; }
+.comm-time { font-size: 11px; color: var(--muted); margin-left: auto; }
+.comm-text { font-size: 13px; color: var(--muted2); line-height: 1.5; margin-bottom: 12px; }
+.comm-actions {
+  display: flex; gap: 12px; align-items: center;
+  font-size: 11px; color: var(--muted);
+}
+.comm-like { color: var(--green); font-weight: 600; }
+.challenge-card {
+  background: var(--surface); border: 1px solid rgba(232,255,71,0.15);
+  border-radius: 16px; padding: 20px 24px;
+}
+.challenge-card-header {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 12px;
+}
+.challenge-card-header .ch-icon { font-size: 20px; }
+.challenge-card-header h4 {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 800;
+  letter-spacing: 1px;
+}
+.ch-vs {
+  display: flex; align-items: center; gap: 8px; margin-bottom: 12px;
+}
+.ch-player {
+  flex: 1; background: #141417; border-radius: 8px; padding: 8px 10px;
+  font-size: 12px; font-weight: 600;
+}
+.ch-vs-label {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 18px;
+  font-weight: 900; color: var(--muted); flex-shrink: 0;
+}
+.ch-progress-bar {
+  height: 6px; background: var(--border); border-radius: 3px; overflow: hidden;
+}
+.ch-progress-fill {
+  height: 100%; border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--green));
+}
+.community-points { display: flex; flex-direction: column; gap: 28px; }
+.comm-point { display: flex; gap: 20px; align-items: flex-start; }
+.comm-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 48px; font-weight: 900; color: var(--border);
+  line-height: 1; flex-shrink: 0; width: 50px;
+}
+.comm-content h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800; font-size: 22px; letter-spacing: 1px; margin-bottom: 6px;
+}
+.comm-content p { font-size: 14px; color: var(--muted2); line-height: 1.6; font-weight: 300; }
+
+/* ── TESTIMONIALS ── */
 .proof-section { padding: 100px 0; }
 .proof-header { text-align: center; margin-bottom: 60px; }
-.testimonials {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
-  margin-bottom: 60px;
-}
+.testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 60px; }
 .testi-card {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: 16px; padding: 28px;
@@ -424,50 +546,22 @@ section { position: relative; }
 /* stats bar */
 .stats-bar {
   display: grid; grid-template-columns: repeat(4, 1fr);
-  border: 1px solid var(--border); border-radius: 16px;
-  overflow: hidden;
+  border: 1px solid var(--border); border-radius: 16px; overflow: hidden;
 }
-.stat-item {
-  padding: 36px 24px; text-align: center;
-  border-right: 1px solid var(--border);
-}
+.stat-item { padding: 36px 24px; text-align: center; border-right: 1px solid var(--border); }
 .stat-item:last-child { border-right: none; }
 .stat-number {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 52px; font-weight: 900; color: var(--accent);
-  line-height: 1;
+  font-size: 52px; font-weight: 900; color: var(--accent); line-height: 1;
 }
 .stat-label { font-size: 13px; color: var(--muted2); margin-top: 6px; font-weight: 300; }
 
 /* ── PRICING ── */
 .pricing-section { padding: 100px 0; background: var(--bg2); }
 .pricing-header { text-align: center; margin-bottom: 60px; }
-.pricing-toggle {
-  display: flex; align-items: center; gap: 12px;
-  justify-content: center; margin-bottom: 48px;
-}
-.toggle-label { font-size: 14px; font-weight: 500; color: var(--muted2); }
-.toggle-label.active { color: var(--text); }
-.toggle-switch {
-  width: 48px; height: 26px; background: var(--border);
-  border-radius: 13px; position: relative; cursor: none;
-  transition: background 0.3s;
-}
-.toggle-switch.on { background: var(--accent); }
-.toggle-switch::after {
-  content: ''; position: absolute; top: 3px; left: 3px;
-  width: 20px; height: 20px; border-radius: 50%; background: #fff;
-  transition: transform 0.3s;
-}
-.toggle-switch.on::after { transform: translateX(22px); }
-.toggle-badge {
-  font-size: 11px; font-weight: 700; letter-spacing: 1px;
-  background: var(--accent); color: #000;
-  padding: 3px 8px; border-radius: 20px;
-}
 .pricing-cards {
-  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;
-  max-width: 900px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  max-width: 820px; margin: 0 auto;
 }
 .price-card {
   background: var(--surface); border: 1px solid var(--border);
@@ -489,8 +583,7 @@ section { position: relative; }
 .price-plan {
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 800; font-size: 18px; letter-spacing: 3px;
-  text-transform: uppercase; color: var(--muted2);
-  margin-bottom: 20px;
+  text-transform: uppercase; color: var(--muted2); margin-bottom: 20px;
 }
 .price-amount {
   font-family: 'Barlow Condensed', sans-serif;
@@ -500,7 +593,6 @@ section { position: relative; }
 .price-amount sup { font-size: 24px; vertical-align: top; margin-top: 12px; color: var(--muted2); }
 .price-amount .cents { font-size: 28px; }
 .price-period { font-size: 13px; color: var(--muted); margin-bottom: 28px; }
-.price-original { font-size: 14px; color: var(--muted); text-decoration: line-through; margin-bottom: 4px; }
 .price-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
 .price-features li {
   display: flex; align-items: flex-start; gap: 10px;
@@ -512,6 +604,12 @@ section { position: relative; }
 }
 .price-features li.no { color: var(--muted); }
 .price-features li.no::before { content: '✗'; color: var(--border); }
+.price-features .section-divider {
+  font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--muted); margin-top: 8px; margin-bottom: 4px;
+  padding-top: 12px; border-top: 1px solid var(--border);
+}
+.price-features .section-divider::before { display: none; }
 .price-btn {
   display: block; width: 100%; text-align: center;
   font-family: 'Barlow Condensed', sans-serif;
@@ -524,23 +622,17 @@ section { position: relative; }
 .price-btn.free:hover { background: var(--border); color: var(--text); }
 .price-btn.cta { background: var(--accent); color: #000; }
 .price-btn.cta:hover { box-shadow: 0 0 30px rgba(232,255,71,0.4); transform: scale(1.02); }
-.price-btn.alt { background: transparent; color: var(--text); border: 1px solid var(--border); }
-.price-btn.alt:hover { border-color: var(--text); }
 
 /* ── FAQ ── */
 .faq-section { padding: 100px 0; }
 .faq-header { text-align: center; margin-bottom: 60px; }
 .faq-list { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
-.faq-item {
-  border-bottom: 1px solid var(--border);
-  overflow: hidden;
-}
+.faq-item { border-bottom: 1px solid var(--border); overflow: hidden; }
 .faq-q {
   display: flex; align-items: center; justify-content: space-between;
   padding: 24px 0; cursor: none;
   font-size: 17px; font-weight: 500;
-  transition: color 0.2s;
-  user-select: none;
+  transition: color 0.2s; user-select: none;
 }
 .faq-q:hover { color: var(--accent); }
 .faq-q .arrow {
@@ -552,8 +644,7 @@ section { position: relative; }
 .faq-item.open .faq-q { color: var(--accent); }
 .faq-item.open .faq-q .arrow { background: var(--accent); color: #000; border-color: var(--accent); transform: rotate(45deg); }
 .faq-a {
-  font-size: 15px; color: var(--muted2); line-height: 1.7;
-  font-weight: 300;
+  font-size: 15px; color: var(--muted2); line-height: 1.7; font-weight: 300;
   max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.3s;
   padding: 0;
 }
@@ -561,9 +652,7 @@ section { position: relative; }
 
 /* ── CTA FINAL ── */
 .cta-section {
-  padding: 120px 0;
-  text-align: center;
-  position: relative; overflow: hidden;
+  padding: 120px 0; text-align: center; position: relative; overflow: hidden;
 }
 .cta-section::before {
   content: '';
@@ -576,8 +665,7 @@ section { position: relative; }
   font-family: 'Barlow Condensed', sans-serif;
   font-weight: 900; font-style: italic;
   font-size: clamp(56px, 10vw, 120px);
-  line-height: 0.88;
-  margin-bottom: 24px;
+  line-height: 0.88; margin-bottom: 24px;
 }
 .cta-big em { color: var(--accent); font-style: normal; }
 .cta-sub { font-size: 18px; color: var(--muted2); margin-bottom: 48px; font-weight: 300; max-width: 480px; margin-left: auto; margin-right: auto; }
@@ -598,112 +686,131 @@ footer {
   font-weight: 900; font-size: 20px; letter-spacing: 2px;
   color: var(--accent);
 }
-.footer-logo span { color: var(--muted); }
-.footer-links { display: flex; gap: 24px; }
-.footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-logo span { color: var(--text); }
+.footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.footer-links a {
+  font-size: 13px; color: var(--muted); text-decoration: none;
+  letter-spacing: 1px; transition: color 0.2s;
+}
 .footer-links a:hover { color: var(--text); }
 .footer-copy { font-size: 12px; color: var(--muted); }
 
-/* ── SCROLL REVEAL ── */
-.reveal {
-  opacity: 0; transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal.visible { opacity: 1; transform: translateY(0); }
-
 /* ── ANIMATIONS ── */
-@keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
 @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-@keyframes ringFill { from { stroke-dashoffset: 226; } to { stroke-dashoffset: 62; } }
-.ring-animate { animation: ringFill 2s ease 0.5s both; }
+@keyframes reveal { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 
-/* ── RESPONSIVE ── */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ── MOBILE ── */
 @media (max-width: 768px) {
   nav { padding: 16px 20px; }
+  nav.scrolled { padding: 12px 20px; }
   .nav-links { display: none; }
-  .problem-grid, .solution-layout, .features-grid,
-  .testimonials, .pricing-cards, .stats-bar { grid-template-columns: 1fr; }
-  .problem-card { border-right: none; }
-  .solution-layout { gap: 40px; }
-  body { cursor: auto; }
-  .cursor { display: none; }
+  .solution-layout, .coach-layout, .community-layout { grid-template-columns: 1fr; gap: 40px; }
+  .app-mockup, .coach-mockup { max-width: 260px; }
+  .solution-layout .app-mockup { order: -1; }
+  .coach-layout .coach-mockup { order: -1; }
+  .features-grid { grid-template-columns: 1fr 1fr; }
+  .testimonials { grid-template-columns: 1fr; }
+  .stats-bar { grid-template-columns: 1fr 1fr; }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3), .stat-item:nth-child(4) { border-top: 1px solid var(--border); }
+  .pricing-cards { grid-template-columns: 1fr; }
+  .problem-grid { grid-template-columns: 1fr; }
+  .problem-card { border-right: none !important; }
+  footer { flex-direction: column; align-items: flex-start; padding: 32px 24px; }
+}
+@media (max-width: 480px) {
+  .features-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4G5C2GH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4G5C2GH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="cursor" id="cursor"></div>
 
 <!-- ── NAV ── -->
-<nav id="navbar">
+<nav id="nav">
   <a href="#" class="nav-logo">VIRADA<span>DECHAVE</span></a>
   <div class="nav-links">
     <a href="#funcionalidades">Funcionalidades</a>
-    <a href="#depoimentos">Depoimentos</a>
+    <a href="#coach">Coach IA</a>
+    <a href="#comunidade">Comunidade</a>
     <a href="#planos">Planos</a>
-    <a href="#beta" style="color:var(--accent);">Beta Testers</a>
-    <a href="#privacidade">Privacidade</a>
     <a href="#faq">FAQ</a>
-    <a href="#beta" class="nav-cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_click',cta_location:'nav',cta_text:'Quero testar'});">Quero testar →</a>
+    <a href="#beta">Beta Testers</a>
+    <a href="#baixar" class="nav-cta">Baixar grátis</a>
   </div>
 </nav>
 
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-badge"><span class="dot"></span> ✦ Acesso antecipado · Beta aberto</div>
+  <div class="hero-badge">
+    <span class="dot"></span>
+    App disponível agora · Android &amp; iOS
+  </div>
   <h1>
-    Chega de<br>
-    <em>rotina</em>
-    <span class="outline">caótica.</span>
+    Chega de
+    <em>rotina caótica.</em>
+    <span class="outline">Vira a chave.</span>
   </h1>
   <p class="hero-sub">
-    O único app que combina <strong>hábitos, tarefas e agenda inteligente</strong>
-    para você finalmente sair do lugar — sem culpa, sem pressão, com resultados.
+    Hábitos diários, tarefas com prazo inteligente e um <strong>Coach IA baseado em Atomic Habits</strong> — tudo em um lugar. Grátis para começar.
   </p>
   <div class="hero-actions">
-    <a href="#beta" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_click',cta_location:'hero',cta_text:'Quero ser beta tester'});">
-      🔑 Quero ser beta tester
+    <a href="#baixar" class="btn-primary" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_click',cta_location:'hero',cta_text:'Baixar grátis'});">
+      🔑 Baixar grátis
     </a>
     <a href="#funcionalidades" class="btn-secondary">
-      Ver como funciona
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm3.5 7.5l-4 3A.5.5 0 017 11V5a.5.5 0 01.8-.4l4 3a.5.5 0 010 .8z"/></svg>
+      Ver funcionalidades
+      <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
     </a>
   </div>
-  <p style="margin-top:16px;font-size:13px;color:var(--muted);letter-spacing:0.5px;">✓ Grátis para sempre &nbsp;·&nbsp; ✓ Sem cartão de crédito &nbsp;·&nbsp; ✓ Sem cadastro obrigatório</p>
   <div class="hero-proof">
     <div class="avatars">
-      <span>😎</span><span>💪</span><span>🔥</span><span>✨</span><span>🚀</span>
+      <span>😎</span><span>🧑‍💻</span><span>👩‍🎓</span><span>🙋</span>
     </div>
-    <div class="proof-text"><strong>100% gratuito.</strong> Sem cartão de crédito. Sem pegadinha.</div>
+    <div class="proof-text"><strong>+2.400</strong> pessoas já viraram a chave</div>
+    <div style="color:var(--border)">·</div>
+    <div class="proof-text">Grátis · Sem cartão de crédito</div>
   </div>
 </section>
 
 <!-- ── TICKER ── -->
 <div class="ticker-wrap">
   <div class="ticker">
-    <span class="ticker-item"><span class="ti-dot">✦</span> Hábitos diários</span>
-    <span class="ticker-item"><span class="ti-dot">✦</span> Tarefas com prazo</span>
-    <span class="ticker-item"><span class="ti-dot">✦</span> Entrada por voz</span>
-    <span class="ticker-item"><span class="ti-dot">✦</span> Streak de dias</span>
-    <span class="ticker-item"><span class="ti-dot">✦</span> Gráficos de progresso</span>
-    <span class="ticker-item"><span class="ti-dot">✦</span> Agenda inteligente</span>
-    <span class="ticker-item"><span class="ti-dot">✦</span> Instala como app</span>
-    <span class="ticker-item"><span class="ti-dot">✦</span> Funciona offline</span>
-    <!-- duplicado para loop contínuo -->
-    <span class="ticker-item"><span class="ti-dot">✦</span> Hábitos diários</span>
-    <span class="ticker-item"><span class="ti-dot">✦</span> Tarefas com prazo</span>
-    <span class="ticker-item"><span class="ti-dot">✦</span> Entrada por voz</span>
-    <span class="ticker-item"><span class="ti-dot">✦</span> Streak de dias</span>
-    <span class="ticker-item"><span class="ti-dot">✦</span> Gráficos de progresso</span>
-    <span class="ticker-item"><span class="ti-dot">✦</span> Agenda inteligente</span>
-    <span class="ticker-item"><span class="ti-dot">✦</span> Instala como app</span>
-    <span class="ticker-item"><span class="ti-dot">✦</span> Funciona offline</span>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Hábitos diários</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Streak de dias</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Tarefas inteligentes</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Entrada por voz</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Coach IA PRO</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Análise de 90 dias</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Comunidade PRO</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Desafios entre amigos</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Heatmap de progresso</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Timer Pomodoro</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Funciona offline</div>
+    <!-- duplicate for seamless loop -->
+    <div class="ticker-item"><span class="ti-dot">✦</span> Hábitos diários</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Streak de dias</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Tarefas inteligentes</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Entrada por voz</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Coach IA PRO</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Análise de 90 dias</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Comunidade PRO</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Desafios entre amigos</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Heatmap de progresso</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Timer Pomodoro</div>
+    <div class="ticker-item"><span class="ti-dot">✦</span> Funciona offline</div>
   </div>
 </div>
 
@@ -712,32 +819,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <div class="reveal">
       <div class="section-label">O problema</div>
-      <h2 class="section-title">Você sabe o que<br>precisa fazer.<br><span style="color:var(--accent2)">Mas não faz.</span></h2>
+      <h2 class="section-title">Você sabe o que<br><em style="color:var(--accent2)">precisa fazer.</em><br>Mas não faz.</h2>
     </div>
     <div class="problem-grid reveal">
       <div class="problem-card">
         <span class="pc-icon">🌙</span>
-        <span class="strike">Reconhece?</span>
+        <div class="strike">todo dia</div>
         <h3>Dorme tarde todo dia</h3>
-        <p>Mais um episódio. Mais uma partida. De repente são 2h da manhã e amanhã você vai arrastar o dia inteiro.</p>
+        <p>A intenção é às 22h. A realidade é 1h da manhã, rolando feed e prometendo que "amanhã é diferente".</p>
       </div>
       <div class="problem-card">
         <span class="pc-icon">📱</span>
-        <span class="strike">Reconhece?</span>
+        <div class="strike">2h → 5h</div>
         <h3>Distrações te devoram</h3>
-        <p>Você abre o celular pra "ver uma coisa" e 40 minutos depois nem lembra o que ia fazer.</p>
+        <p>Ia só ver uma coisa. Uma hora depois ainda está no celular. O trabalho, esperando do lado.</p>
       </div>
       <div class="problem-card">
         <span class="pc-icon">💼</span>
-        <span class="strike">Reconhece?</span>
+        <div class="strike">adiado</div>
         <h3>Trabalho sempre adiado</h3>
-        <p>A lista de tarefas cresce, os prazos chegam, e a sensação de culpa vai junto. Todo. Santo. Dia.</p>
+        <p>A lista de tarefas cresce, os prazos aparecem do nada, e a sensação de não sair do lugar nunca passa.</p>
       </div>
       <div class="problem-card">
-        <span class="pc-icon">🥗</span>
-        <span class="strike">Reconhece?</span>
-        <h3>Saúde que vai ficando pra depois</h3>
-        <p>Academia, alimentação, hidratação. Você sabe que precisa. Mas a rotina nunca encaixa direito.</p>
+        <span class="pc-icon">🔁</span>
+        <div class="strike">de novo</div>
+        <h3>Começa e abandona</h3>
+        <p>Academia por 3 dias. Meditação por uma semana. Leitura que nunca passou do capítulo 2. O ciclo se repete.</p>
       </div>
     </div>
   </div>
@@ -746,74 +853,85 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ── SOLUTION ── -->
 <section class="solution-section" id="funcionalidades">
   <div class="container">
+    <div class="reveal">
+      <div class="section-label">A solução</div>
+      <h2 class="section-title">Uma virada de<br><em style="color:var(--accent)">chave por dia.</em></h2>
+    </div>
     <div class="solution-layout">
-      <!-- App Mockup -->
-      <div class="reveal" style="position:relative;">
+      <div style="position:relative">
         <div class="mockup-glow"></div>
         <div class="app-mockup">
           <div class="mockup-screen">
-            <div class="ms-header"><small>virada de</small>CHAVE</div>
+            <div class="ms-header">
+              VIRADA<small>DE CHAVE</small>
+            </div>
+            <!-- ring -->
             <div class="ms-ring">
-              <svg class="ring-svg" viewBox="0 0 80 80" width="80" height="80">
-                <circle fill="none" stroke="#222" stroke-width="8" cx="40" cy="40" r="36"/>
-                <circle class="ring-animate" fill="none" stroke="#e8ff47" stroke-width="8" stroke-linecap="round"
-                  cx="40" cy="40" r="36" stroke-dasharray="226" stroke-dashoffset="62"
-                  style="filter:drop-shadow(0 0 6px rgba(232,255,71,0.5))"/>
+              <svg class="ring-svg" width="100" height="100" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="38" fill="none" stroke="#1e1e24" stroke-width="8"/>
+                <circle cx="50" cy="50" r="38" fill="none" stroke="#e8ff47" stroke-width="8"
+                  stroke-dasharray="238.76" stroke-dashoffset="71.6" stroke-linecap="round"/>
+                <text x="50" y="46" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="900" font-size="18" fill="#e8ff47">70%</text>
+                <text x="50" y="58" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" fill="#666" letter-spacing="2">HOJE</text>
               </svg>
             </div>
+            <!-- streak -->
+            <div class="ms-streak">
+              <span class="s-fire">🔥</span>
+              <span class="s-text">Streak atual</span>
+              <span class="s-num">14 dias</span>
+            </div>
+            <!-- habits -->
             <div class="ms-habit done">
               <div class="mh-cb">✓</div>
-              <span class="mh-name">⏰ Acordar às 7h</span>
+              <span>🏃</span>
+              <div class="mh-name">Correr 20 min</div>
             </div>
             <div class="ms-habit done">
               <div class="mh-cb">✓</div>
-              <span class="mh-name">💪 Academia</span>
-            </div>
-            <div class="ms-habit done">
-              <div class="mh-cb">✓</div>
-              <span class="mh-name">🎯 2h no negócio</span>
+              <span>📚</span>
+              <div class="mh-name">Ler 10 páginas</div>
             </div>
             <div class="ms-habit">
               <div class="mh-cb"></div>
-              <span class="mh-name">🎮 Video game até 21h</span>
+              <span>🧘</span>
+              <div class="mh-name">Meditar 10 min</div>
             </div>
             <div class="ms-habit">
               <div class="mh-cb"></div>
-              <span class="mh-name">😴 Dormir até 23h</span>
+              <span>💧</span>
+              <div class="mh-name">Beber 2L de água</div>
             </div>
             <div class="ms-nav">
-              <span class="active">🏠<br>hoje</span>
-              <span>📝<br>tarefas</span>
-              <span>📊<br>progresso</span>
-              <span>⚙️<br>config</span>
-            </div>
+              <span class="active">🏠<br>Hábitos</span>
+              <span>📋<br>Tarefas</span>
+              <span>📊<br>Progresso</span>
+              <span>✨<br>Coach</span>
+              <span>⚙️<br>Config</span>
+            </span>
           </div>
         </div>
       </div>
-
-      <!-- Points -->
       <div class="solution-points reveal">
-        <div class="section-label">A solução</div>
-        <h2 class="section-title" style="margin-bottom:40px">Uma virada<br>de chave<br><em style="color:var(--accent)">por dia.</em></h2>
         <div class="sol-point">
           <div class="sol-num">01</div>
           <div class="sol-content">
             <h3>Hábitos que você realmente cumpre</h3>
-            <p>Marque cada hábito com um toque. Veja seu progresso em tempo real. O streak te motiva mais do que qualquer alarme.</p>
+            <p>Marque cada hábito com um toque. Veja seu progresso em tempo real com o anel visual. O streak de dias consecutivos te motiva mais do que qualquer alarme.</p>
           </div>
         </div>
         <div class="sol-point">
           <div class="sol-num">02</div>
           <div class="sol-content">
             <h3>Tarefas com prazo inteligente</h3>
-            <p>Digite "reunião amanhã 14h" e o prazo já entra sozinho. Ou fale por voz — o app entende português.</p>
+            <p>Digite "reunião amanhã 14h" e o prazo entra sozinho. Ou fale por voz — o app entende português. Prioridades visuais, calendário integrado, nunca mais esqueça uma entrega.</p>
           </div>
         </div>
         <div class="sol-point">
           <div class="sol-num">03</div>
           <div class="sol-content">
             <h3>Histórico que te prova a evolução</h3>
-            <p>Gráficos, heatmap de 28 dias, seus hábitos mais consistentes. Dados reais que mostram que você está melhorando.</p>
+            <p>Gráficos de 30 dias, heatmap de consistência, seus hábitos mais cumpridos. Dados reais que mostram que você está melhorando — mesmo quando parece que não.</p>
           </div>
         </div>
       </div>
@@ -821,49 +939,240 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ── FEATURES ── -->
+<!-- ── FEATURES GRID ── -->
 <section class="features-section">
   <div class="container">
     <div class="reveal" style="text-align:center">
       <div class="section-label">Funcionalidades</div>
-      <h2 class="section-title">Tudo que você<br>precisa, nada<br>que você <em style="color:var(--accent)">não precisa.</em></h2>
+      <h2 class="section-title">Tudo que você precisa,<br>nada que você <em style="color:var(--accent)">não precisa.</em></h2>
     </div>
     <div class="features-grid reveal">
       <div class="feat-card">
         <span class="feat-icon">🏠</span>
         <h3>Dashboard diário</h3>
-        <p>Anel de progresso, streak, hábitos organizados por categoria. Tudo de uma olhada só.</p>
+        <p>Anel de progresso, streak, hábitos organizados por categoria com cores customizadas. Tudo de uma olhada só.</p>
         <span class="feat-tag">Grátis</span>
       </div>
       <div class="feat-card">
         <span class="feat-icon">🎤</span>
         <h3>Entrada por voz</h3>
-        <p>Fale suas tarefas em português. "Ligar pro banco amanhã às 14h" — detecta o prazo automaticamente.</p>
+        <p>Fale suas tarefas em português. "Ligar pro banco amanhã às 14h" — detecta o prazo automaticamente e limpa o texto.</p>
         <span class="feat-tag">Grátis</span>
       </div>
       <div class="feat-card">
-        <span class="feat-icon">⏱️</span>
-        <h3>Contagem regressiva</h3>
-        <p>Anel girando em tempo real mostrando quanto falta para cada prazo. Nunca mais esqueça uma entrega.</p>
+        <span class="feat-icon">🍅</span>
+        <h3>Timer Pomodoro</h3>
+        <p>Timer integrado no app para ciclos de foco. Acesse diretamente da tela principal sem abrir outro aplicativo.</p>
+        <span class="feat-tag">Grátis</span>
+      </div>
+      <div class="feat-card">
+        <span class="feat-icon">📅</span>
+        <h3>Calendário de tarefas</h3>
+        <p>Visualize suas tarefas em calendário mensal. Pontos coloridos por prioridade, filtros por status e data.</p>
         <span class="feat-tag">Grátis</span>
       </div>
       <div class="feat-card">
         <span class="feat-icon">📊</span>
         <h3>Gráficos de progresso</h3>
-        <p>Histórico de 30 dias, heatmap de consistência, ranking dos seus hábitos mais cumpridos.</p>
-        <span class="feat-tag pro">Pro</span>
-      </div>
-      <div class="feat-card">
-        <span class="feat-icon">🤖</span>
-        <h3>IA integrada (em breve)</h3>
-        <p>Pergunte "qual minha tarefa mais urgente?" ou peça sugestões de rotina. Seu assistente pessoal inteligente.</p>
-        <span class="feat-tag pro">Pro · v2</span>
-      </div>
-      <div class="feat-card">
-        <span class="feat-icon">📲</span>
-        <h3>Instala como app</h3>
-        <p>Funciona offline, abre igual a um app nativo, sem depender de internet para acessar sua rotina.</p>
+        <p>Histórico de 7, 14 ou 30 dias. Heatmap de consistência, ranking dos hábitos mais cumpridos e comparativo semanal.</p>
         <span class="feat-tag">Grátis</span>
+      </div>
+      <div class="feat-card">
+        <span class="feat-icon">🔔</span>
+        <h3>Notificações por hábito</h3>
+        <p>Defina horário para cada hábito e receba lembretes diários. Notificações 1h antes de tarefas com prazo.</p>
+        <span class="feat-tag">Grátis</span>
+      </div>
+      <div class="feat-card">
+        <span class="feat-icon">🧠</span>
+        <h3>Coach IA</h3>
+        <p>Chat com IA que analisa seus hábitos dos últimos 90 dias e dá sugestões personalizadas baseadas em Atomic Habits.</p>
+        <span class="feat-tag pro">✦ PRO</span>
+      </div>
+      <div class="feat-card">
+        <span class="feat-icon">👥</span>
+        <h3>Comunidade PRO</h3>
+        <p>Publique conquistas, compartilhe streaks, siga pessoas e curta o progresso de quem está na mesma jornada.</p>
+        <span class="feat-tag pro">✦ PRO</span>
+      </div>
+      <div class="feat-card">
+        <span class="feat-icon">🏆</span>
+        <h3>Desafios entre amigos</h3>
+        <p>Desafie alguém a manter um hábito por X dias consecutivos. Provoque, acompanhe o placar e vença juntos.</p>
+        <span class="feat-tag pro">✦ PRO</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COACH IA ── -->
+<section class="coach-section" id="coach">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Coach IA · PRO</div>
+      <h2 class="section-title">Uma IA que<br><em style="color:var(--accent2)">te conhece</em><br>de verdade.</h2>
+      <p style="font-size:17px;color:var(--muted2);font-weight:300;max-width:480px;line-height:1.7;margin-top:16px;">
+        Não é um chatbot genérico. É um coach que leu seus <strong style="color:var(--text)">90 dias de hábitos</strong>, sabe onde você trava e conversa com você para resolver isso.
+      </p>
+    </div>
+    <div class="coach-layout">
+      <div class="coach-features reveal">
+        <div class="coach-feat">
+          <span class="cf-icon">🧠</span>
+          <div>
+            <h4>Análise comportamental de 90 dias</h4>
+            <p>O Coach lê todo o seu histórico antes de falar com você. Sabe quais hábitos você abandona, em que dias você falha mais e por quê.</p>
+          </div>
+        </div>
+        <div class="coach-feat">
+          <span class="cf-icon">💬</span>
+          <div>
+            <h4>Chat baseado em Atomic Habits</h4>
+            <p>Princípios do livro aplicados ao seu contexto real. Não é teoria — são ajustes práticos para a sua rotina específica.</p>
+          </div>
+        </div>
+        <div class="coach-feat">
+          <span class="cf-icon">🔍</span>
+          <div>
+            <h4>Detecção de padrões de sabotagem</h4>
+            <p>Identifica ciclos repetitivos: quando você começa bem e abandona, quais vícios aparecem nos seus dias ruins, e o que fazer.</p>
+          </div>
+        </div>
+        <div class="coach-feat">
+          <span class="cf-icon">📊</span>
+          <div>
+            <h4>Relatórios semanais automáticos</h4>
+            <p>Toda semana, o Coach gera um insight sobre sua evolução com sugestões concretas para a semana seguinte.</p>
+          </div>
+        </div>
+        <div class="coach-feat">
+          <span class="cf-icon">🎯</span>
+          <div>
+            <h4>Sugestões personalizadas de rotina</h4>
+            <p>Pede para o Coach reorganizar sua rotina? Ele analisa seus hábitos, tarefas e objetivos e sugere um plano real.</p>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative">
+        <div class="coach-glow"></div>
+        <div class="coach-mockup">
+          <div class="coach-screen">
+            <div class="cs-header">
+              COACH IA <span class="cs-badge">PRO</span>
+            </div>
+            <div class="chat-bubble ai">
+              Olá! Analisei seus últimos 90 dias. Você tem <strong>streak de 14 dias</strong> — parabéns. Mas notei que você falha mais nas sextas e segundas. Quer entender por quê? 🧠
+            </div>
+            <div class="chat-bubble user">
+              Sim! Sempre que começa a semana eu perco o ritmo...
+            </div>
+            <div class="chat-bubble ai">
+              Faz sentido. É o efeito "reinício de semana". A solução no Atomic Habits é <strong>reduzir o tamanho</strong> do hábito nesses dias, não a frequência. Tente 5 min de meditação nas segundas, não 20.
+            </div>
+            <div class="chat-bubble user">
+              Isso explica muito. O que mais você viu?
+            </div>
+            <div class="chat-bubble ai">
+              Seu hábito de leitura tem <strong>87% de consistência</strong> — é seu ponto forte. Já exercício caiu nas últimas 2 semanas. Quer um plano para recuperar? 🎯
+            </div>
+            <div class="chat-input-bar">
+              <span style="flex:1">Pergunte algo ao seu Coach...</span>
+              <div class="send-btn">→</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COMMUNITY ── -->
+<section class="community-section" id="comunidade">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Comunidade · PRO</div>
+      <h2 class="section-title">Sozinho é<br><em style="color:var(--green)">mais difícil.</em></h2>
+      <p style="font-size:17px;color:var(--muted2);font-weight:300;max-width:480px;line-height:1.7;margin-top:16px;">
+        Compartilhe conquistas, desafie amigos e se inspire com quem está na mesma jornada. A comunidade PRO torna a consistência <strong style="color:var(--text)">contagiante</strong>.
+      </p>
+    </div>
+    <div class="community-layout">
+      <div class="community-cards reveal">
+        <!-- Feed post card -->
+        <div class="comm-card">
+          <div class="comm-card-header">
+            <div class="comm-avatar">R</div>
+            <div>
+              <div class="comm-user">@rafael_m</div>
+              <div class="comm-time">há 2h</div>
+            </div>
+          </div>
+          <div class="comm-text">🔥 Dia 30 de streak! Nunca cheguei tão longe. Acordar às 6h todo dia mudou tudo — mais energia, mais foco, menos ansiedade. Quem mais tá nessa?</div>
+          <div class="comm-actions">
+            <span class="comm-like">❤️ 42</span>
+            <span>💬 8 comentários</span>
+          </div>
+        </div>
+        <!-- Challenge card -->
+        <div class="challenge-card">
+          <div class="challenge-card-header">
+            <span class="ch-icon">🏆</span>
+            <h4>DESAFIO ATIVO — Meditar 20 dias</h4>
+          </div>
+          <div class="ch-vs">
+            <div class="ch-player">
+              <div style="font-size:10px;color:var(--muted);margin-bottom:4px;">Você</div>
+              <div style="font-size:16px;font-family:'Barlow Condensed',sans-serif;font-weight:900;color:var(--accent)">14 dias ✓</div>
+            </div>
+            <div class="ch-vs-label">VS</div>
+            <div class="ch-player">
+              <div style="font-size:10px;color:var(--muted);margin-bottom:4px;">@camila_r</div>
+              <div style="font-size:16px;font-family:'Barlow Condensed',sans-serif;font-weight:900;color:var(--muted2)">11 dias</div>
+            </div>
+          </div>
+          <div class="ch-progress-bar">
+            <div class="ch-progress-fill" style="width:70%"></div>
+          </div>
+          <div style="font-size:11px;color:var(--muted);margin-top:8px;">6 dias restantes · Você está ganhando 💪</div>
+        </div>
+        <!-- Second feed post -->
+        <div class="comm-card">
+          <div class="comm-card-header">
+            <div class="comm-avatar" style="background:linear-gradient(135deg,#3dff8f,#00b894)">C</div>
+            <div>
+              <div class="comm-user">@camila_r</div>
+              <div class="comm-time">há 5h</div>
+            </div>
+          </div>
+          <div class="comm-text">Completei minha meta hoje mesmo com cansaço depois do trabalho. Se tem um dia que eu não queria fazer, era esse. Mas fiz. 🧘‍♀️ Consistência &gt; motivação.</div>
+          <div class="comm-actions">
+            <span class="comm-like">❤️ 31</span>
+            <span>💬 5 comentários</span>
+          </div>
+        </div>
+      </div>
+      <div class="community-points reveal">
+        <div class="comm-point">
+          <div class="comm-num">01</div>
+          <div class="comm-content">
+            <h3>Compartilhe suas conquistas</h3>
+            <p>Poste streaks, treinos, rotinas, conquistas. Crie seu perfil, siga pessoas e construa uma rede de pessoas em evolução real.</p>
+          </div>
+        </div>
+        <div class="comm-point">
+          <div class="comm-num">02</div>
+          <div class="comm-content">
+            <h3>Desafie amigos em hábitos</h3>
+            <p>Escolha um hábito, defina quantos dias consecutivos, e desafie alguém. Quem mantiver o streak por mais tempo vence — e ambos evoluem.</p>
+          </div>
+        </div>
+        <div class="comm-point">
+          <div class="comm-num">03</div>
+          <div class="comm-content">
+            <h3>Provocações e placar ao vivo</h3>
+            <p>Mande provocações para seus adversários, veja o placar em tempo real e sinta a pressão saudável de saber que alguém está te observando.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -879,7 +1188,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="testimonials reveal">
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Eu sabia que precisava mudar, mas nenhum app me mantinha motivado. O Virada de Chave tem aquela <strong>energia que te dá vontade de abrir todo dia.</strong>"</p>
+        <p class="testi-text">"Eu sabia que precisava mudar, mas nenhum app me mantinha motivado. O Virada de Chave tem aquela <strong>energia que te dá vontade de abrir todo dia.</strong> O Coach então é outro nível."</p>
         <div class="testi-author">
           <div class="testi-avatar">👨‍💻</div>
           <div><div class="testi-name">Rafael M.</div><div class="testi-role">Dev freelancer, SP</div></div>
@@ -887,7 +1196,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Uso para controlar minha rotina de estudos e trabalho. <strong>A contagem regressiva nas tarefas é viciante</strong> — não consigo deixar o temporizador chegar a zero."</p>
+        <p class="testi-text">"O Coach IA me apontou exatamente onde eu sabotava minha rotina. <strong>Nunca tive uma análise tão precisa</strong> sobre por que eu abandonava os hábitos toda semana."</p>
         <div class="testi-author">
           <div class="testi-avatar">👩‍🎓</div>
           <div><div class="testi-name">Camila R.</div><div class="testi-role">Estudante de medicina, BH</div></div>
@@ -895,7 +1204,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="testi-card">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Trabalho CLT e ainda tenho projeto paralelo. Esse app foi o único que conseguiu me ajudar a <strong>separar o que é rotina do que é tarefa do dia</strong> sem confundir tudo."</p>
+        <p class="testi-text">"Trabalho CLT e tenho projeto paralelo. O desafio com meu irmão foi o que me fez <strong>não pular um único dia</strong> em 21 dias. Pressão positiva funciona."</p>
         <div class="testi-author">
           <div class="testi-avatar">👨‍💼</div>
           <div><div class="testi-name">Thiago L.</div><div class="testi-role">Analista + empreendedor, RJ</div></div>
@@ -929,50 +1238,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <div class="pricing-header reveal">
       <div class="section-label">Planos</div>
-      <h2 class="section-title">Grátis para<br><em style="color:var(--accent)">sempre.</em></h2>
-      <p style="color:var(--muted2);margin-top:16px;font-size:15px;font-weight:300">Sem cartão de crédito. Sem cadastro obrigatório. Sem pegadinha. O app é gratuito para sempre — o plano Pro é opcional e será lançado em breve com funcionalidades extras.</p>
+      <h2 class="section-title">Grátis para<br><em style="color:var(--accent)">começar.</em></h2>
+      <p style="color:var(--muted2);margin-top:16px;font-size:15px;font-weight:300;max-width:480px;margin-left:auto;margin-right:auto;">
+        Hábitos, tarefas, progresso e streak são <strong style="color:var(--text)">100% gratuitos</strong>. O plano PRO desbloqueia o Coach IA e a Comunidade para quem quer ir além.
+      </p>
     </div>
-          <span class="toggle-label" id="lbl-annual">Anual</span>
-      <span class="toggle-badge" id="save-badge" style="display:none">Economize 40%</span>
-    </div>
-    <div class="pricing-cards reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:820px;margin:0 auto;">
+    <div class="pricing-cards reveal">
 
       <!-- FREE -->
-      <div class="price-card featured" style="border-color:var(--accent);">
-        <span class="price-badge" style="background:var(--accent);color:#000;">✦ Disponível agora</span>
+      <div class="price-card">
         <div class="price-plan">Grátis</div>
         <div class="price-amount">R$<span class="cents">0</span></div>
-        <div class="price-period">para sempre</div>
+        <div class="price-period">para sempre · sem cartão</div>
         <ul class="price-features">
-          <li>Hábitos ilimitados</li>
-          <li>Tarefas com prazo e voz</li>
-          <li>Streak e progresso diário</li>
-          <li>Histórico de 30 dias</li>
-          <li>Funciona 100% offline</li>
+          <li>Hábitos ilimitados com categorias</li>
+          <li>Streak de dias e metas diárias</li>
+          <li>Tarefas com prazo inteligente</li>
+          <li>Entrada por voz em português</li>
+          <li>Calendário de tarefas + prioridades</li>
+          <li>Gráficos de progresso (7/14/30 dias)</li>
+          <li>Heatmap de 28 dias</li>
+          <li>Timer Pomodoro integrado</li>
           <li>Notificações por hábito</li>
+          <li>Backup e restauração de dados</li>
+          <li>Tema claro/escuro</li>
+          <li>Funciona 100% offline</li>
         </ul>
-        <a href="#beta" class="price-btn featured" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_click',cta_location:'planos',cta_text:'Quero ser beta tester'});">🔑 Quero ser beta tester</a>
+        <a href="#baixar" class="price-btn free" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_click',cta_location:'planos',cta_text:'Baixar grátis'});">Baixar grátis</a>
       </div>
 
-      <!-- PRO — em breve -->
-      <div class="price-card" style="opacity:0.55;">
-        <span class="price-badge" style="background:#1e1e24;color:#555;border:1px solid #2a2a30;">🔒 Opcional · Em breve</span>
-        <div class="price-plan" style="color:var(--muted);">Pro</div>
-        <div class="price-amount" style="color:var(--muted);">R$<span>??</span></div>
-        <div class="price-period" style="color:var(--muted);">/mês · totalmente opcional</div>
-        <ul class="price-features" style="color:var(--muted);">
-          <li>Tudo do plano Grátis (para sempre)</li>
-          <li>Histórico completo (90 dias)</li>
-          <li>IA integrada nas tarefas</li>
-          <li>Múltiplos perfis</li>
-          <li>Exportar dados (PDF/CSV)</li>
-          <li>Suporte prioritário</li>
+      <!-- PRO -->
+      <div class="price-card featured">
+        <span class="price-badge">✦ Mais popular</span>
+        <div class="price-plan">Pro</div>
+        <div class="price-amount"><sup>R$</sup>39<span class="cents">,90</span></div>
+        <div class="price-period">/mês · cancele quando quiser</div>
+        <ul class="price-features">
+          <li>Tudo do plano Grátis</li>
+          <li class="section-divider">✦ Coach IA</li>
+          <li>Chat com IA baseado em Atomic Habits</li>
+          <li>Análise comportamental de 90 dias</li>
+          <li>Detecção de padrões de sabotagem</li>
+          <li>Sugestões personalizadas de rotina</li>
+          <li>Relatórios semanais automáticos</li>
+          <li class="section-divider">✦ Comunidade</li>
+          <li>Perfil público e feed de conquistas</li>
+          <li>Desafios de hábitos com amigos</li>
+          <li>Provocações e placar em tempo real</li>
         </ul>
-        <div style="background:#141417;color:#444;border:1px solid #2a2a30;text-align:center;padding:14px;border-radius:8px;font-weight:700;letter-spacing:2px;font-size:13px;text-transform:uppercase;">Lançamento em breve</div>
+        <a href="#baixar" class="price-btn cta" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_click',cta_location:'planos',cta_text:'Assinar PRO'});">✦ Assinar PRO</a>
+        <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:12px;">Sem fidelidade. Cancele nas configurações do app.</p>
       </div>
 
     </div>
-    <p style="text-align:center;margin-top:28px;font-size:13px;color:var(--muted);">Quer ser avisado quando o Pro lançar? <a href="/cdn-cgi/l/email-protection#fe93968d9792889f8c9b9abe99939f9792d09d9193" style="color:var(--accent);text-decoration:none;">Entre em contato</a></p>
   </div>
 </section>
 
@@ -986,27 +1304,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="faq-list reveal">
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Como faço para baixar o app? <span class="arrow">+</span></div>
-        <div class="faq-a">O app ainda não está disponível ao público geral. Estamos em fase de beta fechado com um grupo seleto de testadores. Inscreva-se acima para garantir acesso antes do lançamento oficial — quem entrar no beta recebe o app primeiro e ainda ganha o plano Pro grátis por 3 meses.</div>
+        <div class="faq-a">O app está disponível na Play Store (Android) e na App Store (iOS). Baixe gratuitamente, sem cadastro obrigatório — você já começa a usar na hora.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Funciona sem internet? <span class="arrow">+</span></div>
-        <div class="faq-a">Sim. Todos os seus hábitos e tarefas ficam salvos no seu celular. Você não precisa de conexão para usar o app no dia a dia. A internet é necessária apenas para sincronização de backup (plano Pro).</div>
+        <div class="faq-q" onclick="toggleFaq(this)">O app funciona sem internet? <span class="arrow">+</span></div>
+        <div class="faq-a">Sim. Todos os seus hábitos e tarefas ficam salvos no seu celular e funcionam 100% offline. A internet é necessária apenas para o Coach IA (que precisa processar sua análise em tempo real) e para a Comunidade PRO.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Posso cancelar quando quiser? <span class="arrow">+</span></div>
-        <div class="faq-a">Claro. Sem fidelidade, sem burocracia. Cancele em um clique e continue com o plano Grátis — seus dados e hábitos permanecem intactos.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">O Coach IA realmente personaliza para mim? <span class="arrow">+</span></div>
+        <div class="faq-a">Sim. Antes de cada conversa, o Coach recebe o contexto completo dos seus últimos 90 dias: hábitos, streaks, padrões de falha, tarefas e objetivos. Não é um chatbot genérico — as respostas são baseadas na sua realidade específica, com abordagem inspirada nos princípios do livro Atomic Habits.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Quando a IA chega? <span class="arrow">+</span></div>
-        <div class="faq-a">A IA integrada está em desenvolvimento para a versão 2.0. Assinantes Pro terão acesso prioritário assim que lançar. A previsão é para o segundo semestre de 2025.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">Posso cancelar o PRO quando quiser? <span class="arrow">+</span></div>
+        <div class="faq-a">Claro. Sem fidelidade, sem burocracia. Cancele direto nas configurações do app com um toque. O acesso PRO continua ativo até o fim do período pago — depois disso, seus dados e hábitos ficam intactos no plano gratuito.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Como funciona o pagamento? <span class="arrow">+</span></div>
+        <div class="faq-a">O pagamento é processado pelo AbacatePay. Aceita cartão de crédito e Pix. Após o pagamento, o PRO é ativado automaticamente na sua conta — sem espera.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Como funcionam os desafios da Comunidade? <span class="arrow">+</span></div>
+        <div class="faq-a">Você escolhe um hábito, define a duração (ex: 21 dias consecutivos) e desafia outro usuário PRO. Ambos precisam manter o hábito ativo todos os dias. Você pode ver o progresso do adversário em tempo real, mandar provocações e acompanhar o placar. Quem mantiver o streak por mais dias vence.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Meus dados são privados? <span class="arrow">+</span></div>
-        <div class="faq-a">Seus dados ficam no seu próprio dispositivo por padrão. Nenhum dado é vendido ou compartilhado. O backup em nuvem (Pro) é criptografado e só você tem acesso.</div>
+        <div class="faq-a">Sim. Os dados de hábitos e tarefas ficam no seu dispositivo. Para usuários PRO, um identificador anônimo é usado para sincronização segura — sem rastrear dados pessoais além do necessário para o serviço. Nenhum dado é vendido. Veja a política de privacidade completa no final desta página.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Tem garantia de devolução? <span class="arrow">+</span></div>
-        <div class="faq-a">Sim! 7 dias de garantia total. Se por qualquer motivo você não estiver satisfeito na primeira semana, devolvemos 100% do valor — sem perguntas.</div>
+        <div class="faq-a">Sim. 7 dias de garantia total. Se por qualquer motivo você não estiver satisfeito na primeira semana, devolvemos 100% do valor — sem perguntas. Entre em contato pelo e-mail: mhsilvared@gmail.com</div>
       </div>
     </div>
   </div>
@@ -1016,35 +1342,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="cta-section" id="baixar">
   <div class="container">
     <div class="reveal">
-      <p style="font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:24px;font-weight:700">✦ &nbsp;Acesso antecipado</p>
+      <p style="font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:24px;font-weight:700">✦ &nbsp;Disponível agora</p>
       <div class="cta-big">
-        O app está<br>quase pronto.<br><em>Você também?</em>
+        Sua rotina<br>começa<br><em>hoje.</em>
       </div>
-      <p class="cta-sub">O download ainda não está disponível para todo mundo. Mas você pode garantir seu acesso agora — antes do lançamento oficial.</p>
-      <a href="#beta" class="btn-primary" style="font-size:22px;padding:22px 52px;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_click',cta_location:'pre_footer',cta_text:'Garantir minha vaga'});">
-        🔑 Garantir minha vaga
-      </a>
+      <p class="cta-sub">Baixe grátis e comece a virar sua chave. O PRO você assina só quando quiser — sem pressão.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:24px;">
+        <a href="#" class="btn-primary" style="font-size:18px;padding:18px 36px;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_click',cta_location:'cta_final',cta_text:'Android'});">
+          🤖 Google Play
+        </a>
+        <a href="#" class="btn-primary" style="font-size:18px;padding:18px 36px;background:#fff;" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'cta_click',cta_location:'cta_final',cta_text:'iOS'});">
+          🍎 App Store
+        </a>
+      </div>
       <div class="cta-guarantee">
         <svg width="14" height="14" viewBox="0 0 20 20" fill="var(--green)"><path fill-rule="evenodd" d="M10 1l2.39 6.26L19 8.27l-5 4.87 1.18 6.86L10 16.77l-5.18 3.23L6 13.14 1 8.27l6.61-1.01L10 1z" clip-rule="evenodd"/></svg>
-        Grátis para sempre · Pro grátis por 3 meses · Badge Fundador permanente
+        Grátis para sempre · PRO com 7 dias de garantia · Cancele quando quiser
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
-
-<!-- ══ BETA TESTERS ══ -->
+<!-- ── BETA / EARLY ACCESS ── -->
 <section id="beta" style="padding:120px 0;background:var(--bg);border-top:1px solid var(--border);position:relative;overflow:hidden;">
   <div style="position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(232,255,71,0.07) 0%,transparent 70%);pointer-events:none;"></div>
   <div class="container">
     <div class="reveal" style="max-width:640px;margin:0 auto;">
       <p style="font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:20px;font-weight:700;">✦ &nbsp;Acesso antecipado</p>
-      <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(48px,8vw,80px);line-height:.88;letter-spacing:-1px;margin-bottom:20px;">PARTICIPE<br><em style="color:var(--accent);font-style:normal;">DO TESTE.</em></h2>
-      <p style="font-size:17px;color:var(--muted2);font-weight:300;line-height:1.7;margin-bottom:40px;">Antes do lançamento oficial, estou selecionando um <strong style="color:var(--text);font-weight:600;">grupo seleto de beta testers</strong> para testar o Virada de Chave por 14 dias. Quem entrar agora recebe o <strong style="color:var(--accent);font-weight:600;">plano Pro grátis por 3 meses</strong> e o badge permanente de Fundador.</p>
+      <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(48px,8vw,80px);line-height:.88;letter-spacing:-1px;margin-bottom:20px;">ENTRE PARA<br><em style="color:var(--accent);font-style:normal;">OS FUNDADORES.</em></h2>
+      <p style="font-size:17px;color:var(--muted2);font-weight:300;line-height:1.7;margin-bottom:40px;">Estou selecionando um <strong style="color:var(--text);font-weight:600;">grupo seleto de beta testers</strong> para testar as próximas funcionalidades antes de todo mundo. Quem entrar agora recebe o <strong style="color:var(--accent);font-weight:600;">plano PRO grátis por 3 meses</strong> e o badge permanente de Fundador.</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:48px;">
         <div style="background:rgba(232,255,71,0.04);border:1px solid rgba(232,255,71,0.12);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:12px;"><span style="font-size:20px;">🔑</span><span style="font-size:14px;color:var(--text);font-weight:500;">Acesso antes de todo mundo</span></div>
-        <div style="background:rgba(232,255,71,0.04);border:1px solid rgba(232,255,71,0.12);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:12px;"><span style="font-size:20px;">💎</span><span style="font-size:14px;color:var(--text);font-weight:500;">Pro grátis por 3 meses</span></div>
+        <div style="background:rgba(232,255,71,0.04);border:1px solid rgba(232,255,71,0.12);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:12px;"><span style="font-size:20px;">💎</span><span style="font-size:14px;color:var(--text);font-weight:500;">PRO grátis por 3 meses</span></div>
         <div style="background:rgba(232,255,71,0.04);border:1px solid rgba(232,255,71,0.12);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:12px;"><span style="font-size:20px;">🏆</span><span style="font-size:14px;color:var(--text);font-weight:500;">Badge Fundador permanente</span></div>
         <div style="background:rgba(232,255,71,0.04);border:1px solid rgba(232,255,71,0.12);border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:12px;"><span style="font-size:20px;">📣</span><span style="font-size:14px;color:var(--text);font-weight:500;">Seu feedback molda o app</span></div>
       </div>
@@ -1087,7 +1416,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p style="font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-weight:600;">Passo 2 de 3 · Pesquisa rápida</p>
           <p style="font-size:14px;color:var(--muted2);font-weight:300;margin-bottom:28px;">5 perguntas · menos de 2 minutos. Suas respostas moldam diretamente o app.</p>
           <div style="display:flex;flex-direction:column;gap:28px;">
-
             <div>
               <p style="font-size:16px;font-weight:600;color:var(--text);margin-bottom:12px;">1. Qual é seu maior problema de rotina hoje?</p>
               <div style="display:flex;flex-direction:column;gap:8px;" id="q1-opts">
@@ -1099,7 +1427,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <input type="hidden" id="b-q1" value="">
             </div>
-
             <div>
               <p style="font-size:16px;font-weight:600;color:var(--text);margin-bottom:12px;">2. Quantas horas por dia nas redes sociais?</p>
               <div style="display:flex;flex-direction:column;gap:8px;">
@@ -1110,7 +1437,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <input type="hidden" id="b-q2" value="">
             </div>
-
             <div>
               <p style="font-size:16px;font-weight:600;color:var(--text);margin-bottom:12px;">3. Você já usou algum app de hábitos antes?</p>
               <div style="display:flex;flex-direction:column;gap:8px;">
@@ -1121,7 +1447,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <input type="hidden" id="b-q3" value="">
             </div>
-
             <div>
               <p style="font-size:16px;font-weight:600;color:var(--text);margin-bottom:12px;">4. O que mais te impede de manter uma rotina?</p>
               <div style="display:flex;flex-direction:column;gap:8px;">
@@ -1133,13 +1458,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <input type="hidden" id="b-q4" value="">
             </div>
-
             <div>
               <p style="font-size:16px;font-weight:600;color:var(--text);margin-bottom:12px;">5. Se em 30 dias você conseguisse mudar uma coisa na sua rotina, qual seria?</p>
               <textarea id="b-q5" placeholder="Pode ser algo pequeno mesmo..." rows="3" style="width:100%;background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:10px;padding:14px 18px;color:var(--text);font-family:'Barlow',sans-serif;font-size:15px;outline:none;resize:vertical;transition:border-color .2s;min-height:90px;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'"></textarea>
             </div>
           </div>
-
           <div id="beta-err-2" style="display:none;margin-top:16px;padding:12px 16px;background:rgba(255,71,71,0.08);border:1px solid rgba(255,71,71,0.2);border-radius:10px;font-size:14px;color:#ff7070;"></div>
           <div style="display:flex;gap:12px;margin-top:28px;">
             <button type="button" onclick="betaBack()" style="flex:0 0 auto;background:transparent;border:1px solid var(--border);color:var(--muted2);font-family:'Barlow',sans-serif;font-size:15px;padding:16px 24px;border-radius:12px;cursor:pointer;">← Voltar</button>
@@ -1157,7 +1480,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p style="font-size:15px;color:var(--muted);font-weight:300;line-height:1.7;margin-bottom:32px;">Enviarei o convite de acesso no seu e-mail em até 24h. Fique de olho — pode cair no spam.</p>
           <div style="background:rgba(232,255,71,0.05);border:1px solid rgba(232,255,71,0.15);border-radius:12px;padding:20px 24px;">
             <p style="font-size:13px;font-weight:600;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">O que acontece agora</p>
-            <p style="font-size:14px;color:var(--muted2);line-height:1.9;">1. Você recebe o convite por e-mail<br>2. Instala o app pela Play Store<br>3. Plano Pro ativado automaticamente<br>4. Usa por 14 dias e me conta o que achou</p>
+            <p style="font-size:14px;color:var(--muted2);line-height:1.9;">1. Você recebe o convite por e-mail<br>2. Baixa o app na Play Store ou App Store<br>3. Plano PRO ativado automaticamente<br>4. Usa e me conta o que achou</p>
           </div>
         </div>
       </div>
@@ -1166,23 +1489,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- ── FOOTER ── -->
 <footer>
   <div class="footer-logo">VIRADA<span>DECHAVE</span></div>
   <div class="footer-links">
-    <a href="#">Privacidade</a>
-    <a href="#">Termos</a>
-    <a href="#">Contato</a>
-    <a href="#">Blog</a>
+    <a href="#funcionalidades">Funcionalidades</a>
+    <a href="#coach">Coach IA</a>
+    <a href="#comunidade">Comunidade</a>
+    <a href="#planos">Planos</a>
+    <a href="#faq">FAQ</a>
+    <a href="#beta">Beta Testers</a>
+    <a href="#privacidade">Privacidade</a>
   </div>
-  <div class="footer-copy">© 2025 Virada de Chave. Todos os direitos reservados.</div>
-  <div style="text-align:center;padding:20px 0 0;border-top:1px solid var(--border);margin-top:20px;">
-    <a href="#privacidade" style="font-size:11px;color:var(--muted);text-decoration:none;letter-spacing:2px;text-transform:uppercase;">Política de Privacidade</a>
-    <span style="color:var(--border);margin:0 16px;">·</span>
-    <span style="font-size:11px;color:var(--muted);">© 2026 Virada de Chave</span>
-  </div>
+  <div class="footer-copy">© 2026 Virada de Chave. Todos os direitos reservados.</div>
 </footer>
 
-<!-- ══ POLÍTICA DE PRIVACIDADE ══ -->
+<!-- ── POLÍTICA DE PRIVACIDADE ── -->
 <section id="privacidade" style="padding:100px 0;background:var(--bg2);border-top:1px solid var(--border);">
   <div class="container">
     <div class="reveal" style="max-width:760px;margin:0 auto;">
@@ -1191,37 +1513,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Política de<br><em style="color:var(--accent)">Privacidade</em>
       </h2>
       <div style="color:var(--muted2);font-size:15px;line-height:1.8;font-weight:300;">
-        <p style="margin-bottom:16px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">Última atualização: março de 2026</p>
+        <p style="margin-bottom:16px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);">Última atualização: abril de 2026</p>
 
         <p style="margin-bottom:24px;">O <strong style="color:var(--text)">Virada de Chave</strong> é um aplicativo mobile desenvolvido por Matheus Silva. Esta Política de Privacidade descreve como coletamos, usamos e protegemos suas informações.</p>
 
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin:32px 0 10px;letter-spacing:1px;">1. Dados Coletados</h3>
-        <p style="margin-bottom:24px;">O Virada de Chave é <strong style="color:var(--text)">100% offline</strong>. Não coletamos, transmitimos nem armazenamos qualquer dado pessoal em servidores externos. Todos os seus dados (hábitos, tarefas, histórico e configurações) ficam armazenados exclusivamente no seu dispositivo. Não exigimos cadastro, login nem e-mail para usar o app.</p>
+        <p style="margin-bottom:12px;">O app opera com dois modos:</p>
+        <p style="margin-bottom:12px;"><strong style="color:var(--text)">Plano Gratuito:</strong> Todos os dados (hábitos, tarefas, histórico e configurações) ficam armazenados exclusivamente no seu dispositivo. Não exigimos cadastro ou login. Um identificador anônimo é gerado automaticamente para uso interno.</p>
+        <p style="margin-bottom:24px;"><strong style="color:var(--text)">Plano PRO:</strong> Para assinar o PRO, solicitamos nome e e-mail para criar uma conta e processar o pagamento via AbacatePay. O contexto dos seus hábitos (sem dados pessoais identificáveis) é enviado ao serviço de IA para gerar respostas do Coach. Publicações na Comunidade ficam armazenadas em servidor seguro (Supabase) e são visíveis para outros usuários PRO.</p>
 
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin:32px 0 10px;letter-spacing:1px;">2. Uso das Informações</h3>
-        <p style="margin-bottom:24px;">Como não coletamos dados pessoais, não há uso, processamento ou compartilhamento de informações suas. Todo o funcionamento ocorre inteiramente no seu dispositivo.</p>
+        <p style="margin-bottom:24px;">Os dados coletados são usados exclusivamente para: (a) autenticar sua conta PRO; (b) processar o pagamento da assinatura; (c) gerar análises e respostas personalizadas do Coach IA; (d) exibir seu perfil e publicações na Comunidade PRO. Não usamos seus dados para publicidade.</p>
 
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin:32px 0 10px;letter-spacing:1px;">3. Notificações</h3>
-        <p style="margin-bottom:24px;">O app pode solicitar permissão para enviar notificações locais para lembretes de hábitos. Nenhum dado é transmitido para servidores externos. Você pode revogar essa permissão a qualquer momento nas configurações do dispositivo.</p>
+        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin:32px 0 10px;letter-spacing:1px;">3. Compartilhamento de Dados</h3>
+        <p style="margin-bottom:24px;">Não vendemos nem alugamos seus dados. Compartilhamos apenas com parceiros essenciais para o funcionamento do serviço: <strong style="color:var(--text)">AbacatePay</strong> (processamento de pagamento), <strong style="color:var(--text)">Supabase</strong> (banco de dados seguro da conta PRO) e o serviço de <strong style="color:var(--text)">IA da Anthropic</strong> (geração de respostas do Coach, sem dados pessoais identificáveis).</p>
 
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin:32px 0 10px;letter-spacing:1px;">4. Compartilhamento de Dados</h3>
-        <p style="margin-bottom:24px;">Não vendemos, alugamos ou compartilhamos qualquer informação com terceiros. Não utilizamos SDKs de rastreamento, analytics ou publicidade.</p>
+        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin:32px 0 10px;letter-spacing:1px;">4. Notificações</h3>
+        <p style="margin-bottom:24px;">O app pode solicitar permissão para notificações locais de lembretes de hábitos e tarefas. Nenhum dado é transmitido externamente para isso. Você pode revogar essa permissão a qualquer momento nas configurações do dispositivo.</p>
 
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin:32px 0 10px;letter-spacing:1px;">5. Segurança e Exclusão</h3>
-        <p style="margin-bottom:24px;">Seus dados são protegidos pelo sistema de segurança do seu Android. Para excluir todos os dados, basta desinstalar o aplicativo.</p>
+        <p style="margin-bottom:24px;">Os dados locais são protegidos pelo sistema de segurança do seu dispositivo. Dados da conta PRO são armazenados com criptografia no Supabase. Para excluir sua conta e todos os dados associados, acesse as Configurações do app e selecione "Excluir conta".</p>
 
         <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin:32px 0 10px;letter-spacing:1px;">6. Menores de Idade</h3>
-        <p style="margin-bottom:24px;">O aplicativo não coleta dados de nenhum usuário, incluindo menores de idade.</p>
+        <p style="margin-bottom:24px;">O aplicativo não é direcionado a menores de 13 anos. Para a assinatura PRO, é necessário ter 18 anos ou autorização de responsável.</p>
 
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin:32px 0 10px;letter-spacing:1px;">7. Alterações</h3>
-        <p style="margin-bottom:24px;">Podemos atualizar esta política periodicamente. Notificaremos por meio de uma atualização no aplicativo.</p>
-
-        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin:32px 0 10px;letter-spacing:1px;">8. Contato</h3>
-        <p style="margin-bottom:4px;">📧 <a href="/cdn-cgi/l/email-protection#503d3823393c263122353410373d31393c7e333f3d" style="color:var(--accent);"><span class="__cf_email__" data-cfemail="472a2f342e2b312635222307202a262e2b6924282a">[email&#160;protected]</span></a></p>
+        <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--text);margin:32px 0 10px;letter-spacing:1px;">7. Contato</h3>
+        <p style="margin-bottom:4px;">📧 <a href="mailto:mhsilvared@gmail.com" style="color:var(--accent);">mhsilvared@gmail.com</a></p>
 
         <div style="margin-top:40px;padding:24px;background:rgba(232,255,71,0.05);border:1px solid rgba(232,255,71,0.15);border-radius:12px;">
           <p style="color:var(--accent);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">✦ Resumo simples</p>
-          <p>O Virada de Chave <strong style="color:var(--text)">não coleta, não armazena e não vende nenhum dado seu.</strong> Tudo fica no seu celular. Ponto.</p>
+          <p>No plano <strong style="color:var(--text)">gratuito</strong>: nada sai do seu celular. No plano <strong style="color:var(--text)">PRO</strong>: usamos seu e-mail para a conta, o AbacatePay para o pagamento, e o contexto dos seus hábitos (sem dados pessoais) para o Coach IA. Nada é vendido. Ponto.</p>
         </div>
       </div>
     </div>
@@ -1229,6 +1550,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <script>
+/* ── CUSTOM CURSOR ── */
+var cursor = document.getElementById('cursor');
+document.addEventListener('mousemove', function(e) {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+document.querySelectorAll('a,button,[onclick]').forEach(function(el) {
+  el.addEventListener('mouseenter', function() { cursor.classList.add('big'); });
+  el.addEventListener('mouseleave', function() { cursor.classList.remove('big'); });
+});
+
+/* ── NAV SCROLL ── */
+var nav = document.getElementById('nav');
+window.addEventListener('scroll', function() {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+/* ── REVEAL ON SCROLL ── */
+var revealEls = document.querySelectorAll('.reveal');
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(function(el) { observer.observe(el); });
+
+/* ── FAQ TOGGLE ── */
+function toggleFaq(el) {
+  var item = el.parentElement;
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+  if (!isOpen) item.classList.add('open');
+}
 
 /* ── BETA FORM ── */
 var _bDevice = '';
@@ -1269,8 +1626,6 @@ function betaNext1() {
   if (!nome)                            return betaShowErr('beta-err-1', 'Por favor, informe seu nome.');
   if (!email || email.indexOf('@') < 0) return betaShowErr('beta-err-1', 'Por favor, informe um e-mail válido.');
   if (!device)                          return betaShowErr('beta-err-1', 'Por favor, selecione seu dispositivo.');
-
-  /* Envia dados de contato imediatamente */
   var fd = new FormData();
   fd.append('_subject', '🔑 Novo beta tester — ' + nome);
   fd.append('_captcha', 'false');
@@ -1284,7 +1639,6 @@ function betaNext1() {
   fetch('https://formsubmit.co/ajax/mhsilvared@gmail.com', {
     method: 'POST', body: fd, headers: { 'Accept': 'application/json' }
   });
-
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({ event: 'form_step1_complete', dispositivo: device });
   document.getElementById('beta-step-1').style.display = 'none';
@@ -1300,114 +1654,26 @@ function betaSubmit() {
   var q2 = document.getElementById('b-q2').value;
   var q3 = document.getElementById('b-q3').value;
   var q4 = document.getElementById('b-q4').value;
-  if (!q1 || !q2 || !q3 || !q4) return betaShowErr('beta-err-2', 'Por favor, responda as perguntas de 1 a 4.');
-
-  var email = document.getElementById('b-email').value.trim();
-
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ event: 'form_submitted', q1: q1, q2: q2, q3: q3, q4: q4 });
-  /* Mostra confirmação imediatamente */
-  document.getElementById('beta-step-2').style.display = 'none';
-  document.getElementById('beta-step-3').style.display = 'block';
-  document.getElementById('beta').scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-  /* Envia pesquisa em background */
+  var q5 = document.getElementById('b-q5').value.trim();
+  if (!q1 || !q2 || !q3 || !q4) return betaShowErr('beta-err-2', 'Por favor, responda todas as perguntas (1 a 4).');
   var fd = new FormData();
-  fd.append('_subject', '📋 Pesquisa beta — ' + email);
+  fd.append('_subject', '📋 Pesquisa beta — ' + document.getElementById('b-nome').value.trim());
   fd.append('_captcha', 'false');
   fd.append('_template', 'table');
-  fd.append('Email', email);
-  fd.append('01 Maior problema',    q1);
-  fd.append('02 Horas nas redes',   q2);
-  fd.append('03 Apps anteriores',   q3);
-  fd.append('04 O que impede',      q4);
-  fd.append('05 Mudança em 30 dias', document.getElementById('b-q5').value.trim() || '—');
-  fd.append('Data', new Date().toLocaleString('pt-BR'));
+  fd.append('Nome', document.getElementById('b-nome').value.trim());
+  fd.append('Email', document.getElementById('b-email').value.trim());
+  fd.append('Q1_problema', q1); fd.append('Q2_redes', q2);
+  fd.append('Q3_apps', q3); fd.append('Q4_impedimento', q4);
+  fd.append('Q5_mudanca', q5 || '—');
   fetch('https://formsubmit.co/ajax/mhsilvared@gmail.com', {
     method: 'POST', body: fd, headers: { 'Accept': 'application/json' }
   });
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'form_beta_complete' });
+  document.getElementById('beta-step-2').style.display = 'none';
+  document.getElementById('beta-step-3').style.display = 'block';
+  document.getElementById('beta').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-/* ── CURSOR ── */
-const cursor = document.getElementById('cursor');
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top = e.clientY + 'px';
-});
-document.querySelectorAll('a,button,[onclick]').forEach(el => {
-  el.addEventListener('mouseenter', () => cursor.classList.add('big'));
-  el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
-});
-
-/* ── NAV SCROLL ── */
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
-});
-
-/* ── SCROLL REVEAL ── */
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-/* ── FAQ ── */
-function toggleFaq(el) {
-  const item = el.parentElement;
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  if (!isOpen) item.classList.add('open');
-}
-
-/* ── BILLING TOGGLE ── */
-let isAnnual = false;
-function toggleBilling() {
-  isAnnual = !isAnnual;
-  const toggle = document.getElementById('billing-toggle');
-  toggle.classList.toggle('on', isAnnual);
-  document.getElementById('lbl-monthly').classList.toggle('active', !isAnnual);
-  document.getElementById('lbl-annual').classList.toggle('active', isAnnual);
-  document.getElementById('save-badge').style.display = isAnnual ? 'inline' : 'none';
-  const pv = document.getElementById('price-val');
-  const pp = document.getElementById('price-period');
-  const po = document.getElementById('price-original');
-  const pvt = document.getElementById('price-val-t');
-  const ppt = document.getElementById('price-period-t');
-  const pot = document.getElementById('price-original-t');
-  if (isAnnual) {
-    pv.textContent = '10'; pp.textContent = '/mês · cobrado anualmente'; po.style.display = 'block';
-    pvt.textContent = '16'; ppt.textContent = '/mês · cobrado anualmente'; pot.style.display = 'block';
-  } else {
-    pv.textContent = '17'; pp.textContent = '/mês'; po.style.display = 'none';
-    pvt.textContent = '27'; ppt.textContent = '/mês'; pot.style.display = 'none';
-  }
-}
-
-/* ── COUNTER ANIMATION ── */
-function animateCounter(el, target, suffix='') {
-  let start = 0;
-  const duration = 1800;
-  const step = timestamp => {
-    if (!step.start) step.start = timestamp;
-    const progress = Math.min((timestamp - step.start) / duration, 1);
-    const ease = 1 - Math.pow(1 - progress, 3);
-    el.textContent = (suffix === '\u2605' ? (start + (target - start) * ease).toFixed(1) : Math.floor(start + (target - start) * ease)) + suffix;
-    if (progress < 1) requestAnimationFrame(step);
-  };
-  requestAnimationFrame(step);
-}
-const statObserver = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const nums = e.target.querySelectorAll('.stat-number');
-      if (nums[0]) animateCounter(nums[0], 2.4, 'k');
-      if (nums[1]) animateCounter(nums[1], 87, '%');
-      if (nums[2]) animateCounter(nums[2], 4.9, '\u2605');
-      statObserver.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.3 });
-const statsEl = document.querySelector('.stats-bar');
-if (statsEl) statObserver.observe(statsEl);
-
 </script>
 </body>
 </html>
