@@ -263,10 +263,13 @@ section { position: relative; }
 /* ── SOLUTION / APP PREVIEW ── */
 .solution-section { padding: 120px 0; }
 .solution-layout {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 80px; align-items: center;
-  margin-top: 60px;
+  display: flex; gap: 64px; align-items: flex-start;
+  margin-top: 40px;
 }
+.solution-phone-col { flex: 0 0 280px; position: relative; }
+.solution-text-col { flex: 1; min-width: 0; }
+.sol-title-mobile { display: none; margin-bottom: 40px; }
+.sol-title-desktop { margin-bottom: 36px; }
 .app-mockup {
   position: relative;
   background: var(--surface);
@@ -771,9 +774,12 @@ footer {
   nav { padding: 16px 20px; }
   nav.scrolled { padding: 12px 20px; }
   .nav-links { display: none; }
-  .solution-layout, .coach-layout, .community-layout { grid-template-columns: 1fr; gap: 40px; }
+  .solution-layout { flex-direction: column; gap: 32px; margin-top: 0; }
+  .solution-phone-col { flex: none; width: 100%; display: flex; justify-content: center; }
+  .sol-title-mobile { display: block; }
+  .sol-title-desktop { display: none; }
+  .coach-layout, .community-layout { grid-template-columns: 1fr; gap: 40px; }
   .app-mockup, .coach-mockup { max-width: 260px; }
-  .solution-layout .app-mockup { order: -1; }
   .coach-layout .coach-mockup { order: -1; }
   .features-grid { grid-template-columns: 1fr 1fr; }
   .testimonials { grid-template-columns: 1fr; }
@@ -912,8 +918,13 @@ footer {
 <!-- ── SOLUTION ── -->
 <section class="solution-section" id="funcionalidades">
   <div class="container">
-    <div class="solution-layout" style="align-items:start">
-      <div style="position:relative;padding-top:20px">
+    <!-- Título visível apenas no mobile (acima do telefone) -->
+    <div class="sol-title-mobile reveal">
+      <div class="section-label">A solução</div>
+      <h2 class="section-title">Uma virada de<br><em style="color:var(--accent)">chave por dia.</em></h2>
+    </div>
+    <div class="solution-layout">
+      <div class="solution-phone-col">
         <div class="mockup-glow"></div>
         <div class="app-mockup">
           <div class="mockup-screen">
@@ -966,9 +977,10 @@ footer {
             </span>
           </div>
         </div>
-      </div>
-      <div class="solution-points reveal">
-        <div style="margin-bottom:36px">
+      </div><!-- /solution-phone-col -->
+      <div class="solution-text-col solution-points reveal">
+        <!-- Título visível apenas no desktop (ao lado do telefone) -->
+        <div class="sol-title-desktop">
           <div class="section-label">A solução</div>
           <h2 class="section-title">Uma virada de<br><em style="color:var(--accent)">chave por dia.</em></h2>
         </div>
