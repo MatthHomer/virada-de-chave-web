@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calendly Conectado — Virada de Chave</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080809;
+  --surface: #121215;
+  --border: #1e1e24;
+  --accent: #e8ff47;
+  --text: #f2f2f2;
+  --muted: #666;
+  --calendly: #006BFF;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Barlow', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.app-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+.connector { color: var(--muted); font-size: 20px; }
+.calendly-badge {
+  width: 44px; height: 44px;
+  border-radius: 22px;
+  background: var(--calendly);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 26px; font-weight: 900; color: #fff;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px 32px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.icon { font-size: 56px; margin-bottom: 20px; }
+
+h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 32px; font-weight: 900;
+  color: var(--text);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.user-name {
+  color: var(--calendly);
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.btn-primary {
+  display: block;
+  background: var(--calendly);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 28px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px; font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 12px;
+  text-decoration: none;
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.card.error .icon-wrap { color: #ff4444; }
+.card.error h1 { color: #ff6666; }
+
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.icon { animation: pop 0.4s ease-out; }
+</style>
+</head>
+<body>
+
+<div class="logo-row">
+  <span class="app-logo">VIRADA DE CHAVE</span>
+  <span class="connector">×</span>
+  <div class="calendly-badge">C</div>
+</div>
+
+<div class="card" id="card">
+  <div class="icon" id="icon">✅</div>
+  <h1 id="title">Calendly Conectado!</h1>
+  <div class="user-name" id="user-name"></div>
+  <p id="message">Sua conta foi vinculada com sucesso. Toque abaixo para voltar ao app.</p>
+  <a class="btn-primary" id="btn-open" href="#">Abrir Virada de Chave</a>
+  <p class="hint" id="hint">Se o app não abrir, feche esta aba e volte manualmente. O app detecta a conexão automaticamente.</p>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const userName = params.get('user_name');
+  const userUri = params.get('user_uri');
+  const error = params.get('error');
+
+  const APP_SCHEME = 'viradadechaveapp';
+
+  if (error) {
+    document.getElementById('card').classList.add('error');
+    document.getElementById('icon').textContent = '❌';
+    document.getElementById('title').textContent = 'Erro na conexão';
+    document.getElementById('user-name').textContent = '';
+    document.getElementById('message').textContent = 'Não foi possível conectar sua conta Calendly. ' + decodeURIComponent(error);
+    document.getElementById('btn-open').textContent = 'Voltar ao app';
+    document.getElementById('btn-open').href = APP_SCHEME + '://';
+    document.getElementById('hint').textContent = 'Abra o app manualmente e tente novamente nas Configurações.';
+  } else {
+    const name = userName ? decodeURIComponent(userName) : '';
+    const uri = userUri ? decodeURIComponent(userUri) : '';
+    document.getElementById('user-name').textContent = name ? name : '';
+    document.getElementById('message').textContent = 'Agora o Coach IA pode ver e gerenciar suas reuniões do Calendly.';
+
+    const deepLink = APP_SCHEME + '://calendly-connected'
+      + '?user_name=' + encodeURIComponent(name)
+      + '&user_uri=' + encodeURIComponent(uri);
+
+    document.getElementById('btn-open').href = deepLink;
+
+    // Tenta abrir o app automaticamente após 600ms
+    setTimeout(() => {
+      window.location.href = deepLink;
+    }, 600);
+  }
+</script>
+</body>
+</html>
